@@ -54,18 +54,7 @@ var noticeText: UILabel = {
      passTxtfield.rightViewMode = UITextField.ViewMode.always
      passTxtfield.isSecureTextEntry = true
 //     passTxtfield.createLeftView(withImage: UIImage(systemName: "eye.slash")!, imageOnLeftSide: false, actionOnImageTapped: #selector(togglePassVisible))
-     
-//     let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-//     imageView.contentMode = UIView.ContentMode.scaleAspectFit
-//     let image = UIImage(named: "Show")
-//     imageView.image = image
-//     let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 28, height: 20))
-//     rightView.addSubview(imageView)
-//     rightView.contentMode = UIView.ContentMode.left
-//     passTxtfield.rightView = rightView
-//
-     
-     
+       
      return passTxtfield
  }()
  
@@ -78,5 +67,6 @@ var noticeText: UILabel = {
      signInButton.setTitle("Зарегистрироваться", for: .normal)
      return signInButton
  }()
+
 
 

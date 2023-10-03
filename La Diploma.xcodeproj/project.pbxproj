@@ -7,26 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040886B72A4AED5C008C4EE0 /* CreateNewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040886B62A4AED5C008C4EE0 /* CreateNewPostViewController.swift */; };
+		040886B92A4AEE72008C4EE0 /* ViewsForCreatePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040886B82A4AEE72008C4EE0 /* ViewsForCreatePost.swift */; };
+		040C90422A58271800DE421F /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C90412A58271800DE421F /* NotificationsViewController.swift */; };
+		040C90442A582CAC00DE421F /* NotificationsVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C90432A582CAC00DE421F /* NotificationsVCTableViewCell.swift */; };
+		041480962A2384A700D9F9DC /* ViewsForProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041480952A2384A700D9F9DC /* ViewsForProfileScreen.swift */; };
+		041480992A238BE200D9F9DC /* ActionOnImageTapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041480982A238BE200D9F9DC /* ActionOnImageTapped.swift */; };
 		0416C6F32A1F722B00005F59 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416C6F22A1F722B00005F59 /* AuthViewController.swift */; };
 		0416C6F52A1F726500005F59 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416C6F42A1F726500005F59 /* ProfileViewController.swift */; };
 		0416C6F72A1F81CA00005F59 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416C6F62A1F81CA00005F59 /* FeedViewController.swift */; };
 		0416C6F92A1F834900005F59 /* FafouritesPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416C6F82A1F834900005F59 /* FafouritesPostsViewController.swift */; };
+		042962382A543E09009D6275 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042962372A543E09009D6275 /* SettingsTableViewCell.swift */; };
+		043517292AACB8C400719064 /* PicturesForFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043517282AACB8C400719064 /* PicturesForFeed.swift */; };
+		0435172B2AACCF6D00719064 /* Viewers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435172A2AACCF6D00719064 /* Viewers.swift */; };
 		0444A8D92A1D1580003EE194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444A8D82A1D1580003EE194 /* AppDelegate.swift */; };
 		0444A8DB2A1D1580003EE194 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444A8DA2A1D1580003EE194 /* SceneDelegate.swift */; };
 		0444A8DD2A1D1580003EE194 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444A8DC2A1D1580003EE194 /* ViewController.swift */; };
 		0444A8E32A1D1580003EE194 /* La_Diploma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0444A8E12A1D1580003EE194 /* La_Diploma.xcdatamodeld */; };
 		0444A8E52A1D1587003EE194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0444A8E42A1D1587003EE194 /* Assets.xcassets */; };
 		0444A8E82A1D1587003EE194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0444A8E62A1D1587003EE194 /* LaunchScreen.storyboard */; };
+		04461DF22AA8CFE800F49A30 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04461DF12AA8CFE800F49A30 /* Post.swift */; };
+		044A8E762A641DFA009D9BB5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A8E752A641DFA009D9BB5 /* NetworkService.swift */; };
+		045970E82ABF278A00A38E39 /* FavPostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045970E72ABF278A00A38E39 /* FavPostsTableViewCell.swift */; };
+		048725DA2A868F0900539254 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048725D92A868F0900539254 /* NewsViewController.swift */; };
+		048725DC2A86950500539254 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048725DB2A86950500539254 /* NewsTableViewCell.swift */; };
+		048B1EEE2A4079AB000E8D3B /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B1EED2A4079AB000E8D3B /* CustomTabbarController.swift */; };
+		048B1EF02A409509000E8D3B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B1EEF2A409509000E8D3B /* CustomViewController.swift */; };
+		048B1EF32A40AF60000E8D3B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B1EF22A40AF60000E8D3B /* FirstViewController.swift */; };
+		048F08332A97428B0021251B /* NewsContentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F08322A97428A0021251B /* NewsContentPage.swift */; };
+		0490A4762A9CC4C0004E0624 /* Subscribers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490A4752A9CC4C0004E0624 /* Subscribers.swift */; };
+		04A3E8E62AB6F1A000A3E93A /* FavPostModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04A3E8E42AB6F19F00A3E93A /* FavPostModel.xcdatamodeld */; };
+		04A3E8E82AB6F56200A3E93A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3E8E72AB6F56200A3E93A /* CoreDataManager.swift */; };
+		04B927AB2A59BA48004B0A46 /* AboutApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B927AA2A59BA48004B0A46 /* AboutApplicationViewController.swift */; };
+		04BA5F982A56DDCF00088A40 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA5F972A56DDCF00088A40 /* ChangePasswordViewController.swift */; };
+		04D2F0D52A39A2D3009E1AD2 /* MyPicturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2F0D42A39A2D3009E1AD2 /* MyPicturesCollectionViewCell.swift */; };
+		04D2F0DA2A39D216009E1AD2 /* Poctures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2F0D92A39D216009E1AD2 /* Poctures.swift */; };
+		04D2F0DC2A3A031B009E1AD2 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2F0DB2A3A031B009E1AD2 /* FeedTableViewCell.swift */; };
+		04DBB7B82A55B2E10018C374 /* BasicSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBB7B72A55B2E10018C374 /* BasicSettingsViewController.swift */; };
+		04EB134A2AA63107002E07AB /* My Pictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB13492AA63106002E07AB /* My Pictures.swift */; };
+		04F71A812A2B610B0026BC3A /* FollowersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F71A802A2B610B0026BC3A /* FollowersTableViewCell.swift */; };
+		04F71A832A2B6A880026BC3A /* FollowersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F71A822A2B6A880026BC3A /* FollowersCollectionView.swift */; };
 		04FB50B32A2223D6005E1FB1 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB50B22A2223D6005E1FB1 /* GradientButton.swift */; };
 		04FB50B62A223A5D005E1FB1 /* ViewsForAuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB50B52A223A5D005E1FB1 /* ViewsForAuthScreen.swift */; };
 		04FB50B82A225873005E1FB1 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB50B72A225872005E1FB1 /* CustomTextField.swift */; };
+		04FCDA122A51C020001099E6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCDA112A51C01F001099E6 /* SettingsViewController.swift */; };
+		04FFCA682A6C39CD00421AEE /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFCA672A6C39CC00421AEE /* News.swift */; };
+		592742400DA98FBE4C188C6C /* Pods_La_Diploma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8272E5F973B1506F088AF69F /* Pods_La_Diploma.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040886B62A4AED5C008C4EE0 /* CreateNewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPostViewController.swift; sourceTree = "<group>"; };
+		040886B82A4AEE72008C4EE0 /* ViewsForCreatePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsForCreatePost.swift; sourceTree = "<group>"; };
+		040C90412A58271800DE421F /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		040C90432A582CAC00DE421F /* NotificationsVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVCTableViewCell.swift; sourceTree = "<group>"; };
+		041480952A2384A700D9F9DC /* ViewsForProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsForProfileScreen.swift; sourceTree = "<group>"; };
+		041480982A238BE200D9F9DC /* ActionOnImageTapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionOnImageTapped.swift; sourceTree = "<group>"; };
 		0416C6F22A1F722B00005F59 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		0416C6F42A1F726500005F59 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0416C6F62A1F81CA00005F59 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0416C6F82A1F834900005F59 /* FafouritesPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FafouritesPostsViewController.swift; sourceTree = "<group>"; };
+		042962372A543E09009D6275 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		043517282AACB8C400719064 /* PicturesForFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesForFeed.swift; sourceTree = "<group>"; };
+		0435172A2AACCF6D00719064 /* Viewers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewers.swift; sourceTree = "<group>"; };
 		0444A8D52A1D1580003EE194 /* La Diploma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "La Diploma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0444A8D82A1D1580003EE194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0444A8DA2A1D1580003EE194 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,9 +77,35 @@
 		0444A8E42A1D1587003EE194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0444A8E72A1D1587003EE194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0444A8E92A1D1587003EE194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04461DF12AA8CFE800F49A30 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		044A8E752A641DFA009D9BB5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		045970E72ABF278A00A38E39 /* FavPostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavPostsTableViewCell.swift; sourceTree = "<group>"; };
+		048725D92A868F0900539254 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		048725DB2A86950500539254 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		048B1EED2A4079AB000E8D3B /* CustomTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
+		048B1EEF2A409509000E8D3B /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		048B1EF22A40AF60000E8D3B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		048F08322A97428A0021251B /* NewsContentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsContentPage.swift; sourceTree = "<group>"; };
+		0490A4752A9CC4C0004E0624 /* Subscribers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscribers.swift; sourceTree = "<group>"; };
+		04A3E8E52AB6F1A000A3E93A /* FavPostModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavPostModel.xcdatamodel; sourceTree = "<group>"; };
+		04A3E8E72AB6F56200A3E93A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		04B927AA2A59BA48004B0A46 /* AboutApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutApplicationViewController.swift; path = "La Diploma/Screens/AboutApplicationViewController.swift"; sourceTree = SOURCE_ROOT; };
+		04BA5F972A56DDCF00088A40 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		04D2F0D42A39A2D3009E1AD2 /* MyPicturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPicturesCollectionViewCell.swift; sourceTree = "<group>"; };
+		04D2F0D92A39D216009E1AD2 /* Poctures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poctures.swift; sourceTree = "<group>"; };
+		04D2F0DB2A3A031B009E1AD2 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		04DBB7B72A55B2E10018C374 /* BasicSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSettingsViewController.swift; sourceTree = "<group>"; };
+		04EB13492AA63106002E07AB /* My Pictures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "My Pictures.swift"; sourceTree = "<group>"; };
+		04F71A802A2B610B0026BC3A /* FollowersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersTableViewCell.swift; sourceTree = "<group>"; };
+		04F71A822A2B6A880026BC3A /* FollowersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersCollectionView.swift; sourceTree = "<group>"; };
 		04FB50B22A2223D6005E1FB1 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		04FB50B52A223A5D005E1FB1 /* ViewsForAuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsForAuthScreen.swift; sourceTree = "<group>"; };
 		04FB50B72A225872005E1FB1 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		04FCDA112A51C01F001099E6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		04FFCA672A6C39CC00421AEE /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		8272E5F973B1506F088AF69F /* Pods_La_Diploma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_La_Diploma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		881D38CD64C8A82DF3DBFF2E /* Pods-La Diploma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-La Diploma.debug.xcconfig"; path = "Target Support Files/Pods-La Diploma/Pods-La Diploma.debug.xcconfig"; sourceTree = "<group>"; };
+		8E9961E86FD03AFD4C2B294F /* Pods-La Diploma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-La Diploma.release.xcconfig"; path = "Target Support Files/Pods-La Diploma/Pods-La Diploma.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,20 +113,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				592742400DA98FBE4C188C6C /* Pods_La_Diploma.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041480972A238B4E00D9F9DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04A3E8E42AB6F19F00A3E93A /* FavPostModel.xcdatamodeld */,
+				04D2F0D92A39D216009E1AD2 /* Poctures.swift */,
+				04FB50B72A225872005E1FB1 /* CustomTextField.swift */,
+				041480982A238BE200D9F9DC /* ActionOnImageTapped.swift */,
+				044A8E752A641DFA009D9BB5 /* NetworkService.swift */,
+				04FFCA672A6C39CC00421AEE /* News.swift */,
+				0490A4752A9CC4C0004E0624 /* Subscribers.swift */,
+				04EB13492AA63106002E07AB /* My Pictures.swift */,
+				04461DF12AA8CFE800F49A30 /* Post.swift */,
+				043517282AACB8C400719064 /* PicturesForFeed.swift */,
+				0435172A2AACCF6D00719064 /* Viewers.swift */,
+				04A3E8E72AB6F56200A3E93A /* CoreDataManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0416C6F12A1F674100005F59 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				0416C6F22A1F722B00005F59 /* AuthViewController.swift */,
-				04FB50B22A2223D6005E1FB1 /* GradientButton.swift */,
+				040886B62A4AED5C008C4EE0 /* CreateNewPostViewController.swift */,
 				0416C6F42A1F726500005F59 /* ProfileViewController.swift */,
 				0416C6F62A1F81CA00005F59 /* FeedViewController.swift */,
 				0416C6F82A1F834900005F59 /* FafouritesPostsViewController.swift */,
+				04FCDA112A51C01F001099E6 /* SettingsViewController.swift */,
+				040C90412A58271800DE421F /* NotificationsViewController.swift */,
+				04DBB7B72A55B2E10018C374 /* BasicSettingsViewController.swift */,
+				04BA5F972A56DDCF00088A40 /* ChangePasswordViewController.swift */,
+				048725D92A868F0900539254 /* NewsViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -68,6 +161,8 @@
 			children = (
 				0444A8D72A1D1580003EE194 /* La Diploma */,
 				0444A8D62A1D1580003EE194 /* Products */,
+				477C4C440025DE8322B55C62 /* Pods */,
+				4C6EBC273527703B038A3AE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,9 +177,13 @@
 		0444A8D72A1D1580003EE194 /* La Diploma */ = {
 			isa = PBXGroup;
 			children = (
+				041480972A238B4E00D9F9DC /* Models */,
 				04FB50B42A223A2F005E1FB1 /* Views */,
 				0444A8D82A1D1580003EE194 /* AppDelegate.swift */,
 				0444A8DA2A1D1580003EE194 /* SceneDelegate.swift */,
+				048B1EEF2A409509000E8D3B /* CustomViewController.swift */,
+				048B1EF22A40AF60000E8D3B /* FirstViewController.swift */,
+				048B1EED2A4079AB000E8D3B /* CustomTabbarController.swift */,
 				0444A8DC2A1D1580003EE194 /* ViewController.swift */,
 				0416C6F12A1F674100005F59 /* Screens */,
 				0444A8E42A1D1587003EE194 /* Assets.xcassets */,
@@ -98,10 +197,39 @@
 		04FB50B42A223A2F005E1FB1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04D2F0DB2A3A031B009E1AD2 /* FeedTableViewCell.swift */,
+				042962372A543E09009D6275 /* SettingsTableViewCell.swift */,
+				04FB50B22A2223D6005E1FB1 /* GradientButton.swift */,
 				04FB50B52A223A5D005E1FB1 /* ViewsForAuthScreen.swift */,
-				04FB50B72A225872005E1FB1 /* CustomTextField.swift */,
+				041480952A2384A700D9F9DC /* ViewsForProfileScreen.swift */,
+				040886B82A4AEE72008C4EE0 /* ViewsForCreatePost.swift */,
+				04F71A802A2B610B0026BC3A /* FollowersTableViewCell.swift */,
+				04F71A822A2B6A880026BC3A /* FollowersCollectionView.swift */,
+				04D2F0D42A39A2D3009E1AD2 /* MyPicturesCollectionViewCell.swift */,
+				040C90432A582CAC00DE421F /* NotificationsVCTableViewCell.swift */,
+				04B927AA2A59BA48004B0A46 /* AboutApplicationViewController.swift */,
+				048725DB2A86950500539254 /* NewsTableViewCell.swift */,
+				048F08322A97428A0021251B /* NewsContentPage.swift */,
+				045970E72ABF278A00A38E39 /* FavPostsTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		477C4C440025DE8322B55C62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				881D38CD64C8A82DF3DBFF2E /* Pods-La Diploma.debug.xcconfig */,
+				8E9961E86FD03AFD4C2B294F /* Pods-La Diploma.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4C6EBC273527703B038A3AE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8272E5F973B1506F088AF69F /* Pods_La_Diploma.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0444A8EC2A1D1587003EE194 /* Build configuration list for PBXNativeTarget "La Diploma" */;
 			buildPhases = (
+				C60BFEBD291BC698BA6C5B93 /* [CP] Check Pods Manifest.lock */,
 				0444A8D12A1D1580003EE194 /* Sources */,
 				0444A8D22A1D1580003EE194 /* Frameworks */,
 				0444A8D32A1D1580003EE194 /* Resources */,
+				3AFE22D7F707A98031DD6F44 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,22 +299,96 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3AFE22D7F707A98031DD6F44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-La Diploma/Pods-La Diploma-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-La Diploma/Pods-La Diploma-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-La Diploma/Pods-La Diploma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C60BFEBD291BC698BA6C5B93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-La Diploma-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0444A8D12A1D1580003EE194 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DBB7B82A55B2E10018C374 /* BasicSettingsViewController.swift in Sources */,
+				04F71A832A2B6A880026BC3A /* FollowersCollectionView.swift in Sources */,
+				04A3E8E62AB6F1A000A3E93A /* FavPostModel.xcdatamodeld in Sources */,
+				04FFCA682A6C39CD00421AEE /* News.swift in Sources */,
 				0416C6F52A1F726500005F59 /* ProfileViewController.swift in Sources */,
 				04FB50B82A225873005E1FB1 /* CustomTextField.swift in Sources */,
+				0435172B2AACCF6D00719064 /* Viewers.swift in Sources */,
+				048B1EEE2A4079AB000E8D3B /* CustomTabbarController.swift in Sources */,
 				0444A8DD2A1D1580003EE194 /* ViewController.swift in Sources */,
+				0490A4762A9CC4C0004E0624 /* Subscribers.swift in Sources */,
 				0444A8E32A1D1580003EE194 /* La_Diploma.xcdatamodeld in Sources */,
+				048B1EF32A40AF60000E8D3B /* FirstViewController.swift in Sources */,
+				04A3E8E82AB6F56200A3E93A /* CoreDataManager.swift in Sources */,
+				043517292AACB8C400719064 /* PicturesForFeed.swift in Sources */,
+				040886B92A4AEE72008C4EE0 /* ViewsForCreatePost.swift in Sources */,
+				040886B72A4AED5C008C4EE0 /* CreateNewPostViewController.swift in Sources */,
+				041480962A2384A700D9F9DC /* ViewsForProfileScreen.swift in Sources */,
+				048B1EF02A409509000E8D3B /* CustomViewController.swift in Sources */,
+				04BA5F982A56DDCF00088A40 /* ChangePasswordViewController.swift in Sources */,
 				0416C6F32A1F722B00005F59 /* AuthViewController.swift in Sources */,
+				04B927AB2A59BA48004B0A46 /* AboutApplicationViewController.swift in Sources */,
+				04D2F0DC2A3A031B009E1AD2 /* FeedTableViewCell.swift in Sources */,
+				042962382A543E09009D6275 /* SettingsTableViewCell.swift in Sources */,
 				04FB50B32A2223D6005E1FB1 /* GradientButton.swift in Sources */,
+				04EB134A2AA63107002E07AB /* My Pictures.swift in Sources */,
 				0444A8D92A1D1580003EE194 /* AppDelegate.swift in Sources */,
 				04FB50B62A223A5D005E1FB1 /* ViewsForAuthScreen.swift in Sources */,
+				040C90422A58271800DE421F /* NotificationsViewController.swift in Sources */,
+				048725DC2A86950500539254 /* NewsTableViewCell.swift in Sources */,
+				045970E82ABF278A00A38E39 /* FavPostsTableViewCell.swift in Sources */,
 				0444A8DB2A1D1580003EE194 /* SceneDelegate.swift in Sources */,
+				040C90442A582CAC00DE421F /* NotificationsVCTableViewCell.swift in Sources */,
+				04D2F0DA2A39D216009E1AD2 /* Poctures.swift in Sources */,
 				0416C6F92A1F834900005F59 /* FafouritesPostsViewController.swift in Sources */,
+				04F71A812A2B610B0026BC3A /* FollowersTableViewCell.swift in Sources */,
+				04D2F0D52A39A2D3009E1AD2 /* MyPicturesCollectionViewCell.swift in Sources */,
+				048725DA2A868F0900539254 /* NewsViewController.swift in Sources */,
+				048F08332A97428B0021251B /* NewsContentPage.swift in Sources */,
+				041480992A238BE200D9F9DC /* ActionOnImageTapped.swift in Sources */,
+				044A8E762A641DFA009D9BB5 /* NetworkService.swift in Sources */,
+				04461DF22AA8CFE800F49A30 /* Post.swift in Sources */,
 				0416C6F72A1F81CA00005F59 /* FeedViewController.swift in Sources */,
+				04FCDA122A51C020001099E6 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +524,7 @@
 		};
 		0444A8ED2A1D1587003EE194 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 881D38CD64C8A82DF3DBFF2E /* Pods-La Diploma.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -347,6 +552,7 @@
 		};
 		0444A8EE2A1D1587003EE194 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E9961E86FD03AFD4C2B294F /* Pods-La Diploma.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -403,6 +609,16 @@
 			);
 			currentVersion = 0444A8E22A1D1580003EE194 /* La_Diploma.xcdatamodel */;
 			path = La_Diploma.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		04A3E8E42AB6F19F00A3E93A /* FavPostModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04A3E8E52AB6F1A000A3E93A /* FavPostModel.xcdatamodel */,
+			);
+			currentVersion = 04A3E8E52AB6F1A000A3E93A /* FavPostModel.xcdatamodel */;
+			path = FavPostModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

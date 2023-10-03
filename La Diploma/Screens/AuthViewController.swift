@@ -12,6 +12,7 @@ class AuthViewController: UIViewController, UITextViewDelegate {
         view.addSubview(emailTxtfield)
         view.addSubview(passTxtfield)
         view.addSubview(signInButton)
+    
     }
     
     @objc func togglePassVisible(_ sender: UIButton) {

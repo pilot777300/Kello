@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G314" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FavPost" representedClassName="FavPost" syncable="YES" codeGenerationType="class">
+        <attribute name="postAuthor" optional="YES" attributeType="String"/>
+        <attribute name="postPicture" optional="YES" attributeType="Binary"/>
+        <attribute name="postText" optional="YES" attributeType="String"/>
+        <relationship name="favPostData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavPost" inverseName="favPostData" inverseEntity="FavPost"/>
+    </entity>
+    <elements>
+        <element name="FavPost" positionX="-63" positionY="-18" width="128" height="89"/>
+    </elements>
+</model>

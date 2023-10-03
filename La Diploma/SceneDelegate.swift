@@ -1,11 +1,7 @@
-//
-//  SceneDelegate.swift
-//  La Diploma
-//
-//  Created by Mac on 23.05.2023.
-//
+
 
 import UIKit
+import STTabbar
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,14 +12,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        
         guard let scene = (scene as? UIWindowScene) else { return }
      window = UIWindow(windowScene: scene)
-      //  let nvc = UINavigationController(rootViewController: ViewController())
-        window?.rootViewController = createTabBarController()
+        let nvc = UINavigationController(rootViewController: CustomViewController())
+        window?.rootViewController = nvc//createTabBarController()
         window?.makeKeyAndVisible()
 
     }
     
   private func createProfileViewController() -> UINavigationController {
-        let profileViewController = AuthViewController()//ProfileViewController()
+        let profileViewController = CustomViewController()//ProfileViewController() // AuthViewController()
         profileViewController.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person"), tag: 0)
         return UINavigationController(rootViewController: profileViewController)
     }
@@ -41,9 +37,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
    private func createTabBarController() -> UITabBarController {
-        let tabBarController = UITabBarController()
-        UITabBar.appearance().backgroundColor = .systemGray4
+    
+       let tabBarController = UITabBarController()
+//       let tabBarController: UITabBarController = {
+//           let tbc = UITabBarController()
+//           let x = STTabbar()
+//           x.backgroundColor = .purple
+//           if let myTabbar = tbc.tabBar as? STTabbar {
+//               myTabbar.backgroundColor = .red
+//               myTabbar.centerButtonColor = .blue
+//               myTabbar.centerButtonHeight = 50
+//               myTabbar.padding = 15
+//           }
+//
+//           return tbc
+//       }()
+       
+       
+       
+       UITabBar.appearance().backgroundColor = .systemGray4
         tabBarController.viewControllers = [createProfileViewController(), createFeedViewController(),createFavPostsViewController()]
+      
         return tabBarController
     }
     
@@ -75,7 +89,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+//        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
 
