@@ -8,6 +8,8 @@
 import UIKit
 
 class BasicSettingsViewController: UIViewController {
+    
+    var tempAvatar: UIImageView = UIImageView(image: UIImage(named: "no photo"))//UIImage(named: "no photo")
 
    private let headerBackground: UIImageView = {
        let pic = UIImageView()
@@ -92,7 +94,6 @@ class BasicSettingsViewController: UIViewController {
        let btn = GradientButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.backgroundColor = .blue
-       // btn.clipsToBounds = true
         btn.layer.masksToBounds = true
         btn.layer.cornerRadius = 5
         btn.setTitle("Cохранить", for: .normal)
@@ -101,11 +102,22 @@ class BasicSettingsViewController: UIViewController {
     }()
     
     @objc fileprivate func saveChangesBtnTapped() {
-        print("BTN PRESSED")
+        //let x = ProfileViewController()
+        print("AAAAAA\(tempAvatar.image)")
+        avatar.image = self.avatar.image//tempAvatar.image
         
+        //avatar.image = tempAvatar.image
+        userName.text = nameField.text! + " " + surnameField.text!
+        occupation.text = occupationField.text!
+        dismiss(animated: true, completion: nil)
+        print("SAVED")
     }
     
     @objc fileprivate func addPhotoButtonTapped() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
         print("ADD NEW Photo")
         
     }
@@ -123,7 +135,6 @@ class BasicSettingsViewController: UIViewController {
         view.addSubview(occupationLabel)
         view.addSubview(occupationField)
         view.addSubview(saveChangesButton)
-
     }
     
     fileprivate func setConstraints() {
@@ -193,6 +204,23 @@ class BasicSettingsViewController: UIViewController {
         setConstraints()
        
     }
+}
 
-
+extension BasicSettingsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[.originalImage] as? UIImage {
+            tempAvatar.image = pickedImage
+           // avatar.contentMode = .scaleAspectFill
+            DispatchQueue.main.async {
+                self.avatar.image = pickedImage
+            }
+            //self.avatar.image = pickedImage
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
 }

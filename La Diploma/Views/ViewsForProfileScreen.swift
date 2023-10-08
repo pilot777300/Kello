@@ -10,7 +10,7 @@ import UIKit
     return pic
 }()
 
-  var avatar: UIImageView = {
+ var avatar: UIImageView = {
     let avatar = UIImageView()
     avatar.translatesAutoresizingMaskIntoConstraints = false
     avatar.backgroundColor = .white
@@ -106,32 +106,10 @@ var tableView: UITableView = {
     return tv
 }()
 
- var myPicCollectionView: UICollectionView = {
-   let layout = UICollectionViewFlowLayout()
-    layout.scrollDirection = .horizontal
-    let width = UIScreen.main.bounds.width / 4.5
-     let heigh = UIScreen.main.bounds.height / 11
-     layout.itemSize = CGSize(width: width, height: heigh)
-     layout.minimumInteritemSpacing = 7
-     layout.sectionInset = UIEdgeInsets(top: 35, left: 12, bottom: 12, right: 12)
-     let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-     cv.translatesAutoresizingMaskIntoConstraints = false
-    // cv.delegate = self
-    // cv.dataSource = self
-     cv.clipsToBounds = true
-    cv.isScrollEnabled = true
-   //  cv.showsHorizontalScrollIndicator = true
-//       cv.alwaysBounceHorizontal = true
-    //cv.bounces = true
-     cv.register(FollowersCollectionView.self, forCellWithReuseIdentifier: "FollowersCell")
-     return cv
-     
- }()
-
 var myPicturesCollectionView: UICollectionView = {
    let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .vertical
-    let width = UIScreen.main.bounds.width / 3.3
+    let width = UIScreen.main.bounds.width / 3.1
     let heigh = UIScreen.main.bounds.height / 6
     layout.itemSize = CGSize(width: width, height: heigh)
     layout.minimumInteritemSpacing = 1
@@ -139,9 +117,7 @@ var myPicturesCollectionView: UICollectionView = {
     let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
     cv.translatesAutoresizingMaskIntoConstraints = false
     cv.showsVerticalScrollIndicator = true
-    cv.backgroundColor = .blue
-   // cv.delegate = self
-   // cv.dataSource = self
+    cv.backgroundColor = .white
     cv.clipsToBounds = true
     cv.register(MyPicturesCollectionViewCell.self, forCellWithReuseIdentifier: "myPicturesCell")
     return cv

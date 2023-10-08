@@ -15,9 +15,9 @@ class MyPicturesCollectionViewCell: UICollectionViewCell {
    lazy var image: UIImageView = {
        let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
-        img.contentMode = .scaleToFill
+       img.contentMode = .scaleToFill
         img.clipsToBounds = true
-        img.backgroundColor = .red
+        img.backgroundColor = .clear
        img.layer.cornerRadius = 15
        // img.layer.cornerRadius = 40
        return img

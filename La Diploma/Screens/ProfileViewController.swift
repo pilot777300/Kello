@@ -4,9 +4,10 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    private let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 19)]
+   private let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 19)]
    private let myPictures = NetworkService()
    private let followersCollection = FollowersTableViewCell()
+    
     
    fileprivate func setConstraints() {
         let safAarea = view.safeAreaLayoutGuide
@@ -29,7 +30,6 @@ class ProfileViewController: UIViewController {
             editProfileLogo.trailingAnchor.constraint(equalTo: safAarea.trailingAnchor, constant: -30),
             editProfileLogo.heightAnchor.constraint(equalToConstant: 25),
             editProfileLogo.widthAnchor.constraint(equalToConstant: 25),
-            
             
             userName.topAnchor.constraint(equalTo: avatar.bottomAnchor, constant: 3),
             userName.heightAnchor.constraint(equalToConstant: 30),
@@ -73,7 +73,6 @@ class ProfileViewController: UIViewController {
         let centerView = configureStackView("Посты", number: 30)
         mStackView.addArrangedSubview(centerView)
         
-       
         view.addSubview(headerBackground)
         view.addSubview(avatar)
         view.addSubview(logOutLogo)
@@ -87,7 +86,6 @@ class ProfileViewController: UIViewController {
         view.addSubview(myPicturesCollectionView)
         myPicturesCollectionView.delegate = self
         myPicturesCollectionView.dataSource = self
-        
     }
     
     @objc func startEditProfile(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -145,8 +143,6 @@ class ProfileViewController: UIViewController {
             return myView
         }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -197,8 +193,6 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             }
         return cell
         }
-        
-       
     }
     
     

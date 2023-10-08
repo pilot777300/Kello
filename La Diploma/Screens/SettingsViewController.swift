@@ -168,17 +168,14 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             let vc = BasicSettingsViewController()
             navigationController?.pushViewController(vc, animated: true)
-            print("SELECTED 1")
         } else if indexPath.row == 1 {
             let vc = ChangePasswordViewController()
             navigationController?.pushViewController(vc, animated: true)
-            print("SELECTED 2")
         } else if indexPath.row == 2 {
             let vc = NotificationsViewController()
             navigationController?.pushViewController(vc, animated: true)
-            print("SELECTED 3")
         } else if indexPath.row == 3 {
-            print("SELECTED 4")
+          
         
         } else if indexPath.row == 4 {
             let vc = AboutApplicationViewController()

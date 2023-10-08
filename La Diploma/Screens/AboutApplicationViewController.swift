@@ -8,7 +8,7 @@ class AboutApplicationViewController: UIViewController {
     private let textAboutApplication: UILabel = {
        let txt = UILabel()
         txt.translatesAutoresizingMaskIntoConstraints = false
-        txt.text = " Информация в ближайшее время будет добавлена sdbdfdvevebfaedavtjelemgmtlakcfntotuhaslxmkacnjbnrkssvfjsncfjdkznfjomekeutjvncjdjzkfhcbxnzkjfghvncjsd"
+        txt.text = " Информация в ближайшее время будет добавлена. Приложение сейчас работает в тестовом режиме "
         txt.backgroundColor = .systemGray5
         txt.numberOfLines = 0
         txt.textAlignment = .left

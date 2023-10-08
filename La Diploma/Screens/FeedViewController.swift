@@ -118,8 +118,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         cell.postTxt.text = list.text
         } else {
             cell.postTxt.text = "Комментариев пока нет"
-        }
-        
+            }
         cell.likes.text = String(listOfPictures.likes.count)
         cell.postImage.downloadSPostImages(url: url!)
         postImg = cell.postImage

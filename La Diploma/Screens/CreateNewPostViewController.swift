@@ -3,8 +3,6 @@ import UIKit
 
 class CreateNewPostViewController: UIViewController {
     
- 
-    
     private lazy var publishPostButton: UIButton = {
         let button = UIButton(type: .custom)
          button.translatesAutoresizingMaskIntoConstraints = false
@@ -21,7 +19,10 @@ class CreateNewPostViewController: UIViewController {
     }
     
     @objc fileprivate func imageTapped() {
-        print("IMAGE TAPPED")
+        let vc = UIImagePickerController()
+        vc.delegate = self
+        vc.sourceType = .photoLibrary
+        present(vc, animated: true, completion: nil)
     }
     
     fileprivate func configureView() {
@@ -64,7 +65,6 @@ class CreateNewPostViewController: UIViewController {
             placeholder.topAnchor.constraint(equalTo: textForNewPost.topAnchor, constant: 10),
             placeholder.leadingAnchor.constraint(equalTo: textForNewPost.leadingAnchor, constant: 10),
             
-            
             newPostAuthorLocation.topAnchor.constraint(equalTo: newPostAuthor.bottomAnchor, constant: 3),
             newPostAuthorLocation.leadingAnchor.constraint(equalTo: newPostAuthorAvatar.trailingAnchor, constant: 20),
             newPostAuthorLocation.trailingAnchor.constraint(equalTo: safearea.trailingAnchor, constant: -10),
@@ -75,7 +75,6 @@ class CreateNewPostViewController: UIViewController {
             publishPostButton.widthAnchor.constraint(equalToConstant: 150),
             publishPostButton.heightAnchor.constraint(equalToConstant: 35)
         ])
-        
     }
     
     override func viewDidLoad() {
@@ -86,7 +85,6 @@ class CreateNewPostViewController: UIViewController {
         setConstraints()
 
     }
-    
 }
 extension CreateNewPostViewController : UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
@@ -97,5 +95,20 @@ extension CreateNewPostViewController : UITextViewDelegate {
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
         placeholder.isHidden = true
+    }
+}
+
+extension CreateNewPostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+   
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[.originalImage] as? UIImage {
+            pictureForNewPost.contentMode = .scaleAspectFill
+            pictureForNewPost.image = pickedImage
+        }
+        self.dismiss(animated: true, completion: nil)
     }
 }

@@ -38,10 +38,7 @@ class FafouritesPostsViewController: UIViewController {
         view.backgroundColor = .systemGray4
         configureFavPostTableView()
         setupConstraints()
-     
     }
-    
-
 }
 
 extension FafouritesPostsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -50,7 +47,6 @@ extension FafouritesPostsViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //activityIndicatorView.stopAnimating()
         let cell = favPostTableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! FavPostsTableViewCell
         
         let favPost = coreManager.favPostData[indexPath.row]
