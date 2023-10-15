@@ -9,7 +9,8 @@ class FeedViewController: UIViewController {
    private var postImg: UIImageView = UIImageView(image: UIImage(named: "no photo"))
   
     private let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 19)]
-    private let netWork = NetworkService()
+   // private let netWork = NetworkService()
+    private let internetService = NetworkManager()
     private lazy var activityIndicator: UIActivityIndicatorView = {
          let activityIndicatorView = UIActivityIndicatorView(style: .medium)
         activityIndicatorView.hidesWhenStopped = true
@@ -69,15 +70,32 @@ class FeedViewController: UIViewController {
         configureFeedTableView()
         setupConstraints()
         activityIndicator.startAnimating()
-        netWork.fetchPostData (completion:{ [weak self] getPosts in
-            self!.feedTableView.reloadData()
-            self!.activityIndicator.stopAnimating()
-        })
-        netWork.fetchPostPictures { [weak self] getPictures in
-            self!.feedTableView.reloadData()
+        
+//        netWork.fetchPostData (completion:{ [weak self] getPosts in
+//            self!.feedTableView.reloadData()
+//            self!.activityIndicator.stopAnimating()
+//        })
+        
+        internetService.fetchData(urlString: "https://api.vk.com/method/wall.get?owner_id=7663807&access_token=vk1.a.4bpS6wrXVP58-y4pwdhmhEINUPFL9K88dIwQ0xaYGdzE2euE3WEXkKBMpSgv4kAiZ1V1z8BOozHL0g6EuJ6bsiLOuEbHDdu6OBciFWBqs4kKH2xMw2hzT7ZRfs58v270HG5vPHKZiyoAj5XXlGRfY2dteV89NqFIotPLyX1FWp3TZ-0KG2QJzYbia2R84Muxy-5BCF07WeAxAMgvOvC2NQ&v=5.131") { (post:Post?) in
+            attributesForPost = post!.response.items
+            self.feedTableView.reloadData()
+            self.activityIndicator.stopAnimating()
         }
-        netWork.fetchDataOfViewers { [weak self] getViewers in
-            self!.feedTableView.reloadData()
+        
+     //   netWork.fetchPostPictures { [weak self] getPictures in
+//            self!.feedTableView.reloadData()
+//        }
+        internetService.fetchData(urlString: "https://api.vk.com/method/photos.getAll?owner_id=7663807&extended=1&access_token=vk1.a.4bpS6wrXVP58-y4pwdhmhEINUPFL9K88dIwQ0xaYGdzE2euE3WEXkKBMpSgv4kAiZ1V1z8BOozHL0g6EuJ6bsiLOuEbHDdu6OBciFWBqs4kKH2xMw2hzT7ZRfs58v270HG5vPHKZiyoAj5XXlGRfY2dteV89NqFIotPLyX1FWp3TZ-0KG2QJzYbia2R84Muxy-5BCF07WeAxAMgvOvC2NQ&v=5.131") { (picsForFeed: PicturesForFeed?) in
+            picturesForFeed = picsForFeed!.response.items
+            self.feedTableView.reloadData()
+        }
+        
+//        netWork.fetchDataOfViewers { [weak self] getViewers in
+//            self!.feedTableView.reloadData()
+//        }
+        
+        internetService.fetchData(urlString: "https://api.vk.com/method/friends.get?user_id=7663807&&fields=photo_100,city&access_token=vk1.a.4bpS6wrXVP58-y4pwdhmhEINUPFL9K88dIwQ0xaYGdzE2euE3WEXkKBMpSgv4kAiZ1V1z8BOozHL0g6EuJ6bsiLOuEbHDdu6OBciFWBqs4kKH2xMw2hzT7ZRfs58v270HG5vPHKZiyoAj5XXlGRfY2dteV89NqFIotPLyX1FWp3TZ-0KG2QJzYbia2R84Muxy-5BCF07WeAxAMgvOvC2NQ&v=5.131") { (spectators: Viewers?) in
+            listOfViewers = spectators!.response.items
         }
     }
 }
