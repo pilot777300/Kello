@@ -7,7 +7,7 @@ class FeedViewController: UIViewController {
    private lazy var feedTableView = UITableView()
    private let reuseIdentifier = "Cell"
    private var postImg: UIImageView = UIImageView(image: UIImage(named: "no photo"))
-  
+    lazy var isCoreDatacontainsPost = false
     private let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 19)]
    // private let netWork = NetworkService()
     private let internetService = NetworkManager()
@@ -132,6 +132,12 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         let newArray = listOfViewers[indexPath.row]
         let url = URL(string: listOfPictures.sizes[4].url)
         let urlForViewers = URL(string: newArray.photo_100)
+       // let idOfPost = temporaryId[indexPath.row]//UUID()
+     //  let x = UUID()
+      //  temporaryId.append(idOfPost)
+        // print("POST ID ===\(postId)")
+       // temporaryId.append(postId)
+       // print("TTTEEEPOOORARY ID = \(temporaryId)")
         if list.text != "" {
         cell.postTxt.text = list.text
         } else {
@@ -154,9 +160,32 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         }
         let list = attributesForPost[indexPath.row]
         let newArray = listOfViewers[indexPath.row]
+        let vc = FafouritesPostsViewController()
+        let dataFromCoreDataManager = vc.coreManager.favPostData
+        
         let coreDataManager = CoredataManager()
         let img = postImg.image
         let compressedImg = img!.jpegData(compressionQuality: 1.0)
-        coreDataManager.addPost(author: newArray.first_name + " " + newArray.last_name, text: list.text, picture: compressedImg!)
+        dataFromCoreDataManager.forEach { data in
+            if (list.text == data.postText || newArray.first_name == data.postAuthor! || data.postPicture == compressedImg)
+            {
+                isCoreDatacontainsPost = true
+                print("POST IS IN FAVOURITES")
+                
+            }
+            
+        }
+        if isCoreDatacontainsPost == false {
+            coreDataManager.addPost(author: newArray.first_name + " " + newArray.last_name, text: list.text, picture: compressedImg!)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        //let postId = UUID()
+       // if  temporaryId.contains(postId)//== temporaryId
+      //  { print("Already in favorites")} else {
+//        coreDataManager.addPost(author: newArray.first_name + " " + newArray.last_name, text: list.text, picture: compressedImg!)
+
+      
+        }
     }
-}
+

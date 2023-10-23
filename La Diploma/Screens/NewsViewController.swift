@@ -6,6 +6,7 @@ class NewsViewController: UIViewController {
     private lazy var newsTableView = UITableView()
     private let reuseIdentifier = "Cell"
     private let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 19)]
+    private let downloader = NetworkManager()
     private lazy var activityIndicatorView: UIActivityIndicatorView = {
          let activityIndicatorView = UIActivityIndicatorView(style: .medium)
         activityIndicatorView.hidesWhenStopped = true
@@ -40,31 +41,32 @@ class NewsViewController: UIViewController {
         ])
     }
     
-    func fetchNewsData() {
-        guard let url = URL(string: "https://newsdata.io/api/1/news?country=ru&apikey=pub_265722b7bb33f141948a5b128247efe8402d2") else {
-            print("ERROR OCCURED DURING URL ADRESS")
-            return
-        }
-        let task = URLSession.shared.dataTask(with: url) { (data, _, _) in
-            guard let data = data
-            else {
-              print("Error occured during access data")
-                return
-            }
-            var newsData: News?
-            do {
-                newsData = try JSONDecoder().decode(News.self, from: data)
-            } catch {
-               print("Error during decode Data")
-            }
-            self.newsList = newsData!.results
-            DispatchQueue.main.async {
-                self.newsTableView.reloadData()
-                self.activityIndicatorView.stopAnimating()
-            }
-        }
-        task.resume()
-    }
+  
+//    func fetchNewsData() {
+//        guard let url = URL(string: "https://newsdata.io/api/1/news?country=ru&apikey=pub_265722b7bb33f141948a5b128247efe8402d2") else {
+//            print("ERROR OCCURED DURING URL ADRESS")
+//            return
+//        }
+//        let task = URLSession.shared.dataTask(with: url) { (data, _, _) in
+//            guard let data = data
+//            else {
+//              print("Error occured during access data")
+//                return
+//            }
+//            var newsData: News?
+//            do {
+//                newsData = try JSONDecoder().decode(News.self, from: data)
+//            } catch {
+//               print("Error during decode Data")
+//            }
+//            self.newsList = newsData!.results
+//            DispatchQueue.main.async {
+//                self.newsTableView.reloadData()
+//                self.activityIndicatorView.stopAnimating()
+//            }
+//        }
+//        task.resume()
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +76,12 @@ class NewsViewController: UIViewController {
         configureNewsTableView()
         setupConstraints()
         activityIndicatorView.startAnimating()
-        fetchNewsData()
+      //  fetchNewsData()
+        downloader.fetchData(urlString: "https://newsdata.io/api/1/news?country=ru&apikey=pub_265722b7bb33f141948a5b128247efe8402d2") { (newsApi: News?) in
+            self.newsList = newsApi!.results
+            self.newsTableView.reloadData()
+            self.activityIndicatorView.stopAnimating()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

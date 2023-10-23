@@ -5,7 +5,7 @@ import CoreData
 
 class FafouritesPostsViewController: UIViewController {
     
-   private let coreManager = CoredataManager.shared
+    let coreManager = CoredataManager.shared
    private let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 19)]
     private lazy var favPostTableView = UITableView()
     private let reuseIdentifier = "Cell"
@@ -48,7 +48,8 @@ extension FafouritesPostsViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favPostTableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! FavPostsTableViewCell
-        
+//        let feedController = FeedViewController()
+//        feedController.temporaryId
         let favPost = coreManager.favPostData[indexPath.row]
         if let data = favPost.postPicture {
             let image = UIImage(data: data)

@@ -2,7 +2,7 @@
 import Foundation
 
 final class NetworkManager {
-   private func fetchData <T: Decodable> (urlString: String, completion: @escaping(T) -> ()) {
+    func fetchData <T: Decodable> (urlString: String, completion: @escaping(T) -> ()) {
         let url = URL(string: urlString)
         URLSession.shared.dataTask(with: url!) { data, responce, error in
             if let error = error {

@@ -13,8 +13,6 @@ import STTabbar
                let tabBar = STTabbar()
             tabBar.centerButtonColor = UIColor(named: "BlueCustomColor")//.purple
             tabBar.buttonImage = UIImage(named: "Plus")
-            
-           // tabBar.buttonTitle = "FF"
             tabBar.tabbarColor = .gray
             tabBar.centerButtonActionHandler = {
                 print("BITTONPRESSED")

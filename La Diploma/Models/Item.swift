@@ -4,6 +4,6 @@ import Foundation
 
 struct Item: Codable {
     let comments: Comment
-   // let likes: Like
+   // let id: UUID
     let text: String
 }
