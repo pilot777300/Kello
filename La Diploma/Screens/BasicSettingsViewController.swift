@@ -1,15 +1,9 @@
-//
-//  BasicSettingsViewController.swift
-//  La Diploma
-//
-//  Created by Mac on 05.07.2023.
-//
 
 import UIKit
 
 class BasicSettingsViewController: UIViewController {
     
-    var tempAvatar: UIImageView = UIImageView(image: UIImage(named: "no photo"))//UIImage(named: "no photo")
+   lazy var tempAvatar: UIImageView = UIImageView(image: UIImage(named: "no photo"))
 
    private let headerBackground: UIImageView = {
        let pic = UIImageView()
@@ -19,7 +13,7 @@ class BasicSettingsViewController: UIViewController {
        return pic
    }()
 
-    lazy var avatar: UIImageView = {
+    lazy var avatarPicture: UIImageView = {
        let avatar = UIImageView()
        avatar.translatesAutoresizingMaskIntoConstraints = false
        avatar.backgroundColor = .white
@@ -102,11 +96,8 @@ class BasicSettingsViewController: UIViewController {
     }()
     
     @objc fileprivate func saveChangesBtnTapped() {
-        //let x = ProfileViewController()
-        print("AAAAAA\(tempAvatar.image)")
-        avatar.image = self.avatar.image//tempAvatar.image
-        
-        //avatar.image = tempAvatar.image
+     
+        avatar.image = self.avatarPicture.image
         userName.text = nameField.text! + " " + surnameField.text!
         occupation.text = occupationField.text!
         dismiss(animated: true, completion: nil)
@@ -126,7 +117,7 @@ class BasicSettingsViewController: UIViewController {
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(addPhotoButtonTapped))
         cameraButton.addGestureRecognizer(recognizer)
         view.addSubview(headerBackground)
-        view.addSubview(avatar)
+        view.addSubview(avatarPicture)
         view.addSubview(cameraButton)
         view.addSubview(nameLabel)
         view.addSubview(nameField)
@@ -146,17 +137,17 @@ class BasicSettingsViewController: UIViewController {
             headerBackground.widthAnchor.constraint(equalTo: safeArea.widthAnchor),
             headerBackground.heightAnchor.constraint(equalToConstant: 150),
             
-            avatar.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-            avatar.widthAnchor.constraint(equalToConstant: 100),
-            avatar.heightAnchor.constraint(equalToConstant: 100),
-            avatar.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+            avatarPicture.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            avatarPicture.widthAnchor.constraint(equalToConstant: 100),
+            avatarPicture.heightAnchor.constraint(equalToConstant: 100),
+            avatarPicture.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
             
-            cameraButton.topAnchor.constraint(equalTo: avatar.bottomAnchor, constant: -30),
-            cameraButton.leadingAnchor.constraint(equalTo: avatar.trailingAnchor, constant: -30),
+            cameraButton.topAnchor.constraint(equalTo: avatarPicture.bottomAnchor, constant: -30),
+            cameraButton.leadingAnchor.constraint(equalTo: avatarPicture.trailingAnchor, constant: -30),
             cameraButton.widthAnchor.constraint(equalToConstant: 30),
             cameraButton.heightAnchor.constraint(equalToConstant: 30),
             
-            nameLabel.topAnchor.constraint(equalTo: avatar.bottomAnchor, constant: 30),
+            nameLabel.topAnchor.constraint(equalTo: avatarPicture.bottomAnchor, constant: 30),
             nameLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 30),
             nameLabel.widthAnchor.constraint(equalToConstant: 100),
             nameLabel.heightAnchor.constraint(equalToConstant: 20),
@@ -196,7 +187,6 @@ class BasicSettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // self.title = "Редактировать профиль"
         self.navigationItem.title = ""
           self.navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
@@ -215,11 +205,9 @@ extension BasicSettingsViewController: UIImagePickerControllerDelegate, UINaviga
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
             tempAvatar.image = pickedImage
-           // avatar.contentMode = .scaleAspectFill
             DispatchQueue.main.async {
-                self.avatar.image = pickedImage
+                self.avatarPicture.image = pickedImage
             }
-            //self.avatar.image = pickedImage
         }
         self.dismiss(animated: true, completion: nil)
     }

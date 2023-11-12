@@ -12,7 +12,6 @@
 		040C90422A58271800DE421F /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C90412A58271800DE421F /* NotificationsViewController.swift */; };
 		040C90442A582CAC00DE421F /* NotificationsVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C90432A582CAC00DE421F /* NotificationsVCTableViewCell.swift */; };
 		041480962A2384A700D9F9DC /* ViewsForProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041480952A2384A700D9F9DC /* ViewsForProfileScreen.swift */; };
-		041480992A238BE200D9F9DC /* ActionOnImageTapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041480982A238BE200D9F9DC /* ActionOnImageTapped.swift */; };
 		0416C6F32A1F722B00005F59 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416C6F22A1F722B00005F59 /* AuthViewController.swift */; };
 		0416C6F52A1F726500005F59 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416C6F42A1F726500005F59 /* ProfileViewController.swift */; };
 		0416C6F72A1F81CA00005F59 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416C6F62A1F81CA00005F59 /* FeedViewController.swift */; };
@@ -29,11 +28,9 @@
 		0444A8D92A1D1580003EE194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444A8D82A1D1580003EE194 /* AppDelegate.swift */; };
 		0444A8DB2A1D1580003EE194 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444A8DA2A1D1580003EE194 /* SceneDelegate.swift */; };
 		0444A8DD2A1D1580003EE194 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444A8DC2A1D1580003EE194 /* ViewController.swift */; };
-		0444A8E32A1D1580003EE194 /* La_Diploma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0444A8E12A1D1580003EE194 /* La_Diploma.xcdatamodeld */; };
 		0444A8E52A1D1587003EE194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0444A8E42A1D1587003EE194 /* Assets.xcassets */; };
 		0444A8E82A1D1587003EE194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0444A8E62A1D1587003EE194 /* LaunchScreen.storyboard */; };
 		04461DF22AA8CFE800F49A30 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04461DF12AA8CFE800F49A30 /* Post.swift */; };
-		044A8E762A641DFA009D9BB5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A8E752A641DFA009D9BB5 /* NetworkService.swift */; };
 		045970E82ABF278A00A38E39 /* FavPostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045970E72ABF278A00A38E39 /* FavPostsTableViewCell.swift */; };
 		048725DA2A868F0900539254 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048725D92A868F0900539254 /* NewsViewController.swift */; };
 		048725DC2A86950500539254 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048725DB2A86950500539254 /* NewsTableViewCell.swift */; };
@@ -44,6 +41,17 @@
 		0490A4762A9CC4C0004E0624 /* Subscribers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490A4752A9CC4C0004E0624 /* Subscribers.swift */; };
 		04A3E8E62AB6F1A000A3E93A /* FavPostModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04A3E8E42AB6F19F00A3E93A /* FavPostModel.xcdatamodeld */; };
 		04A3E8E82AB6F56200A3E93A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3E8E72AB6F56200A3E93A /* CoreDataManager.swift */; };
+		04B84E6D2AFFD66B00592E82 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B84E6C2AFFD66B00592E82 /* Results.swift */; };
+		04B84E6F2AFFD7E200592E82 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B84E6E2AFFD7E100592E82 /* City.swift */; };
+		04B84E712AFFD80D00592E82 /* Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B84E702AFFD80D00592E82 /* Man.swift */; };
+		04B84E732AFFD83C00592E82 /* Viewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B84E722AFFD83C00592E82 /* Viewer.swift */; };
+		04B84E752AFFD89900592E82 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B84E742AFFD89900592E82 /* Like.swift */; };
+		04B84E772AFFD8BA00592E82 /* PicForFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B84E762AFFD8BA00592E82 /* PicForFeed.swift */; };
+		04B84E792AFFD8D400592E82 /* Pic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B84E782AFFD8D400592E82 /* Pic.swift */; };
+		04B84E7B2AFFD8FB00592E82 /* PictureForPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B84E7A2AFFD8FB00592E82 /* PictureForPost.swift */; };
+		04B84E7D2AFFD93B00592E82 /* Adress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B84E7C2AFFD93B00592E82 /* Adress.swift */; };
+		04B84E7F2AFFD96000592E82 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B84E7E2AFFD96000592E82 /* Photo.swift */; };
+		04B84E812AFFD99400592E82 /* Pictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B84E802AFFD99400592E82 /* Pictures.swift */; };
 		04B927AB2A59BA48004B0A46 /* AboutApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B927AA2A59BA48004B0A46 /* AboutApplicationViewController.swift */; };
 		04BA5F982A56DDCF00088A40 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA5F972A56DDCF00088A40 /* ChangePasswordViewController.swift */; };
 		04D2F0D52A39A2D3009E1AD2 /* MyPicturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2F0D42A39A2D3009E1AD2 /* MyPicturesCollectionViewCell.swift */; };
@@ -67,7 +75,6 @@
 		040C90412A58271800DE421F /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		040C90432A582CAC00DE421F /* NotificationsVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVCTableViewCell.swift; sourceTree = "<group>"; };
 		041480952A2384A700D9F9DC /* ViewsForProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsForProfileScreen.swift; sourceTree = "<group>"; };
-		041480982A238BE200D9F9DC /* ActionOnImageTapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionOnImageTapped.swift; sourceTree = "<group>"; };
 		0416C6F22A1F722B00005F59 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		0416C6F42A1F726500005F59 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0416C6F62A1F81CA00005F59 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -85,12 +92,10 @@
 		0444A8D82A1D1580003EE194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0444A8DA2A1D1580003EE194 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0444A8DC2A1D1580003EE194 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0444A8E22A1D1580003EE194 /* La_Diploma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = La_Diploma.xcdatamodel; sourceTree = "<group>"; };
 		0444A8E42A1D1587003EE194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0444A8E72A1D1587003EE194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0444A8E92A1D1587003EE194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04461DF12AA8CFE800F49A30 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		044A8E752A641DFA009D9BB5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		045970E72ABF278A00A38E39 /* FavPostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavPostsTableViewCell.swift; sourceTree = "<group>"; };
 		048725D92A868F0900539254 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		048725DB2A86950500539254 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -101,6 +106,17 @@
 		0490A4752A9CC4C0004E0624 /* Subscribers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscribers.swift; sourceTree = "<group>"; };
 		04A3E8E52AB6F1A000A3E93A /* FavPostModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavPostModel.xcdatamodel; sourceTree = "<group>"; };
 		04A3E8E72AB6F56200A3E93A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		04B84E6C2AFFD66B00592E82 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		04B84E6E2AFFD7E100592E82 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		04B84E702AFFD80D00592E82 /* Man.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Man.swift; sourceTree = "<group>"; };
+		04B84E722AFFD83C00592E82 /* Viewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewer.swift; sourceTree = "<group>"; };
+		04B84E742AFFD89900592E82 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		04B84E762AFFD8BA00592E82 /* PicForFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicForFeed.swift; sourceTree = "<group>"; };
+		04B84E782AFFD8D400592E82 /* Pic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pic.swift; sourceTree = "<group>"; };
+		04B84E7A2AFFD8FB00592E82 /* PictureForPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureForPost.swift; sourceTree = "<group>"; };
+		04B84E7C2AFFD93B00592E82 /* Adress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adress.swift; sourceTree = "<group>"; };
+		04B84E7E2AFFD96000592E82 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		04B84E802AFFD99400592E82 /* Pictures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pictures.swift; sourceTree = "<group>"; };
 		04B927AA2A59BA48004B0A46 /* AboutApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutApplicationViewController.swift; path = "La Diploma/Screens/AboutApplicationViewController.swift"; sourceTree = SOURCE_ROOT; };
 		04BA5F972A56DDCF00088A40 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		04D2F0D42A39A2D3009E1AD2 /* MyPicturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPicturesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -138,8 +154,6 @@
 				04A3E8E42AB6F19F00A3E93A /* FavPostModel.xcdatamodeld */,
 				04D2F0D92A39D216009E1AD2 /* Poctures.swift */,
 				04FB50B72A225872005E1FB1 /* CustomTextField.swift */,
-				041480982A238BE200D9F9DC /* ActionOnImageTapped.swift */,
-				044A8E752A641DFA009D9BB5 /* NetworkService.swift */,
 				04FFCA672A6C39CC00421AEE /* News.swift */,
 				0490A4752A9CC4C0004E0624 /* Subscribers.swift */,
 				04EB13492AA63106002E07AB /* My Pictures.swift */,
@@ -153,6 +167,17 @@
 				042DF4B72ADBD12600232150 /* NetworkManager.swift */,
 				042DF4B92ADBDD3A00232150 /* Subscriber.swift */,
 				042DF4BB2ADBDD8200232150 /* Person.swift */,
+				04B84E6C2AFFD66B00592E82 /* Results.swift */,
+				04B84E6E2AFFD7E100592E82 /* City.swift */,
+				04B84E702AFFD80D00592E82 /* Man.swift */,
+				04B84E722AFFD83C00592E82 /* Viewer.swift */,
+				04B84E742AFFD89900592E82 /* Like.swift */,
+				04B84E762AFFD8BA00592E82 /* PicForFeed.swift */,
+				04B84E782AFFD8D400592E82 /* Pic.swift */,
+				04B84E7A2AFFD8FB00592E82 /* PictureForPost.swift */,
+				04B84E7C2AFFD93B00592E82 /* Adress.swift */,
+				04B84E7E2AFFD96000592E82 /* Photo.swift */,
+				04B84E802AFFD99400592E82 /* Pictures.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,7 +232,6 @@
 				0444A8E42A1D1587003EE194 /* Assets.xcassets */,
 				0444A8E62A1D1587003EE194 /* LaunchScreen.storyboard */,
 				0444A8E92A1D1587003EE194 /* Info.plist */,
-				0444A8E12A1D1580003EE194 /* La_Diploma.xcdatamodeld */,
 			);
 			path = "La Diploma";
 			sourceTree = "<group>";
@@ -365,19 +389,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DBB7B82A55B2E10018C374 /* BasicSettingsViewController.swift in Sources */,
+				04B84E712AFFD80D00592E82 /* Man.swift in Sources */,
+				04B84E7D2AFFD93B00592E82 /* Adress.swift in Sources */,
 				04F71A832A2B6A880026BC3A /* FollowersCollectionView.swift in Sources */,
 				04A3E8E62AB6F1A000A3E93A /* FavPostModel.xcdatamodeld in Sources */,
+				04B84E772AFFD8BA00592E82 /* PicForFeed.swift in Sources */,
 				04FFCA682A6C39CD00421AEE /* News.swift in Sources */,
 				042DF4C02ADC46DC00232150 /* Item.swift in Sources */,
 				042DF4B82ADBD12600232150 /* NetworkManager.swift in Sources */,
+				04B84E6F2AFFD7E200592E82 /* City.swift in Sources */,
 				0416C6F52A1F726500005F59 /* ProfileViewController.swift in Sources */,
 				04FB50B82A225873005E1FB1 /* CustomTextField.swift in Sources */,
 				0435172B2AACCF6D00719064 /* Viewers.swift in Sources */,
 				048B1EEE2A4079AB000E8D3B /* CustomTabbarController.swift in Sources */,
 				0444A8DD2A1D1580003EE194 /* ViewController.swift in Sources */,
 				0490A4762A9CC4C0004E0624 /* Subscribers.swift in Sources */,
-				0444A8E32A1D1580003EE194 /* La_Diploma.xcdatamodeld in Sources */,
 				048B1EF32A40AF60000E8D3B /* FirstViewController.swift in Sources */,
+				04B84E7B2AFFD8FB00592E82 /* PictureForPost.swift in Sources */,
 				04A3E8E82AB6F56200A3E93A /* CoreDataManager.swift in Sources */,
 				043517292AACB8C400719064 /* PicturesForFeed.swift in Sources */,
 				040886B92A4AEE72008C4EE0 /* ViewsForCreatePost.swift in Sources */,
@@ -385,12 +413,16 @@
 				041480962A2384A700D9F9DC /* ViewsForProfileScreen.swift in Sources */,
 				048B1EF02A409509000E8D3B /* CustomViewController.swift in Sources */,
 				04BA5F982A56DDCF00088A40 /* ChangePasswordViewController.swift in Sources */,
+				04B84E752AFFD89900592E82 /* Like.swift in Sources */,
 				0416C6F32A1F722B00005F59 /* AuthViewController.swift in Sources */,
 				04B927AB2A59BA48004B0A46 /* AboutApplicationViewController.swift in Sources */,
+				04B84E7F2AFFD96000592E82 /* Photo.swift in Sources */,
 				04D2F0DC2A3A031B009E1AD2 /* FeedTableViewCell.swift in Sources */,
 				042DF4C22ADC46FA00232150 /* Comment.swift in Sources */,
+				04B84E6D2AFFD66B00592E82 /* Results.swift in Sources */,
 				042962382A543E09009D6275 /* SettingsTableViewCell.swift in Sources */,
 				04FB50B32A2223D6005E1FB1 /* GradientButton.swift in Sources */,
+				04B84E732AFFD83C00592E82 /* Viewer.swift in Sources */,
 				04EB134A2AA63107002E07AB /* My Pictures.swift in Sources */,
 				0444A8D92A1D1580003EE194 /* AppDelegate.swift in Sources */,
 				04FB50B62A223A5D005E1FB1 /* ViewsForAuthScreen.swift in Sources */,
@@ -400,15 +432,15 @@
 				045970E82ABF278A00A38E39 /* FavPostsTableViewCell.swift in Sources */,
 				0444A8DB2A1D1580003EE194 /* SceneDelegate.swift in Sources */,
 				042DF4BC2ADBDD8200232150 /* Person.swift in Sources */,
+				04B84E812AFFD99400592E82 /* Pictures.swift in Sources */,
 				040C90442A582CAC00DE421F /* NotificationsVCTableViewCell.swift in Sources */,
 				04D2F0DA2A39D216009E1AD2 /* Poctures.swift in Sources */,
 				0416C6F92A1F834900005F59 /* FafouritesPostsViewController.swift in Sources */,
 				04F71A812A2B610B0026BC3A /* FollowersTableViewCell.swift in Sources */,
+				04B84E792AFFD8D400592E82 /* Pic.swift in Sources */,
 				04D2F0D52A39A2D3009E1AD2 /* MyPicturesCollectionViewCell.swift in Sources */,
 				048725DA2A868F0900539254 /* NewsViewController.swift in Sources */,
 				048F08332A97428B0021251B /* NewsContentPage.swift in Sources */,
-				041480992A238BE200D9F9DC /* ActionOnImageTapped.swift in Sources */,
-				044A8E762A641DFA009D9BB5 /* NetworkService.swift in Sources */,
 				04461DF22AA8CFE800F49A30 /* Post.swift in Sources */,
 				042DF4BA2ADBDD3A00232150 /* Subscriber.swift in Sources */,
 				0416C6F72A1F81CA00005F59 /* FeedViewController.swift in Sources */,
@@ -626,16 +658,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0444A8E12A1D1580003EE194 /* La_Diploma.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0444A8E22A1D1580003EE194 /* La_Diploma.xcdatamodel */,
-			);
-			currentVersion = 0444A8E22A1D1580003EE194 /* La_Diploma.xcdatamodel */;
-			path = La_Diploma.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		04A3E8E42AB6F19F00A3E93A /* FavPostModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

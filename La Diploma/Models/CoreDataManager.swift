@@ -10,6 +10,8 @@ class CoredataManager {
         reloadPost()
     }
     
+    var favPostData: [FavPost] = []
+    
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "FavPostModel")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -41,8 +43,6 @@ class CoredataManager {
         post.postPicture = picture
         saveContext()
     }
-    
-    var favPostData: [FavPost] = []
     
     func reloadPost() {
         let fetchRequest = FavPost.fetchRequest()

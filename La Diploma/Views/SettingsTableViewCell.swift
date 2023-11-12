@@ -59,7 +59,6 @@ class SettingsTableViewCell: UITableViewCell {
         let safeArea = self.safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
-        
             backView.topAnchor.constraint(equalTo: safeArea.topAnchor),
             backView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
             backView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),

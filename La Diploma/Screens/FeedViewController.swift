@@ -2,14 +2,13 @@
 import UIKit
 import CoreData
 
-class FeedViewController: UIViewController {
-    
+class FeedViewController: UIViewController, UIGestureRecognizerDelegate {
+  
+   private lazy var isPushed = false
    private lazy var feedTableView = UITableView()
    private let reuseIdentifier = "Cell"
-   private var postImg: UIImageView = UIImageView(image: UIImage(named: "no photo"))
-    lazy var isCoreDatacontainsPost = false
+   private var postImg: [UIImageView] = [UIImageView(image: UIImage(named: "no photo"))]
     private let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 19)]
-   // private let netWork = NetworkService()
     private let internetService = NetworkManager()
     private lazy var activityIndicator: UIActivityIndicatorView = {
          let activityIndicatorView = UIActivityIndicatorView(style: .medium)
@@ -22,18 +21,7 @@ class FeedViewController: UIViewController {
         self.view.addSubview(activityIndicatorView)
         return activityIndicatorView
     }()
-    
-    private lazy var heartImg: UIImageView = {
-      let heart = UIImageView()
-        heart.image = UIImage(systemName: "heart.fill")
-        heart.translatesAutoresizingMaskIntoConstraints = false
-        heart.isHidden = true
-        heart.backgroundColor = .clear
-        heart.tintColor = .red
-        return heart
-    }()
-  
-    
+       
    fileprivate func configureFeedTableView() {
         feedTableView.delegate = self
         feedTableView.dataSource = self
@@ -44,7 +32,6 @@ class FeedViewController: UIViewController {
         feedTableView.translatesAutoresizingMaskIntoConstraints = false
        feedTableView.backgroundColor = .systemGray4
         view.addSubview(feedTableView)
-       view.addSubview(heartImg)
     }
     
     fileprivate func setupConstraints() {
@@ -54,12 +41,14 @@ class FeedViewController: UIViewController {
             feedTableView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
             feedTableView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
             feedTableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
-            
-            heartImg.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            heartImg.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            heartImg.widthAnchor.constraint(equalToConstant: 100),
-            heartImg.heightAnchor.constraint(equalToConstant: 80)
         ])
+    }
+    
+    fileprivate func showAlertPostInFavs() {
+        let alertPostInFavorites = UIAlertController(title: nil, message: "Пост уже в избранном", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default)
+        alertPostInFavorites.addAction(okButton)
+        self.present(alertPostInFavorites, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
@@ -70,30 +59,18 @@ class FeedViewController: UIViewController {
         configureFeedTableView()
         setupConstraints()
         activityIndicator.startAnimating()
-        
-//        netWork.fetchPostData (completion:{ [weak self] getPosts in
-//            self!.feedTableView.reloadData()
-//            self!.activityIndicator.stopAnimating()
-//        })
-        
+       
         internetService.fetchData(urlString: "https://api.vk.com/method/wall.get?owner_id=7663807&access_token=vk1.a.4bpS6wrXVP58-y4pwdhmhEINUPFL9K88dIwQ0xaYGdzE2euE3WEXkKBMpSgv4kAiZ1V1z8BOozHL0g6EuJ6bsiLOuEbHDdu6OBciFWBqs4kKH2xMw2hzT7ZRfs58v270HG5vPHKZiyoAj5XXlGRfY2dteV89NqFIotPLyX1FWp3TZ-0KG2QJzYbia2R84Muxy-5BCF07WeAxAMgvOvC2NQ&v=5.131") { (post:Post?) in
             attributesForPost = post!.response.items
             self.feedTableView.reloadData()
             self.activityIndicator.stopAnimating()
         }
         
-     //   netWork.fetchPostPictures { [weak self] getPictures in
-//            self!.feedTableView.reloadData()
-//        }
         internetService.fetchData(urlString: "https://api.vk.com/method/photos.getAll?owner_id=7663807&extended=1&access_token=vk1.a.4bpS6wrXVP58-y4pwdhmhEINUPFL9K88dIwQ0xaYGdzE2euE3WEXkKBMpSgv4kAiZ1V1z8BOozHL0g6EuJ6bsiLOuEbHDdu6OBciFWBqs4kKH2xMw2hzT7ZRfs58v270HG5vPHKZiyoAj5XXlGRfY2dteV89NqFIotPLyX1FWp3TZ-0KG2QJzYbia2R84Muxy-5BCF07WeAxAMgvOvC2NQ&v=5.131") { (picsForFeed: PicturesForFeed?) in
             picturesForFeed = picsForFeed!.response.items
             self.feedTableView.reloadData()
         }
-        
-//        netWork.fetchDataOfViewers { [weak self] getViewers in
-//            self!.feedTableView.reloadData()
-//        }
-        
+
         internetService.fetchData(urlString: "https://api.vk.com/method/friends.get?user_id=7663807&&fields=photo_100,city&access_token=vk1.a.4bpS6wrXVP58-y4pwdhmhEINUPFL9K88dIwQ0xaYGdzE2euE3WEXkKBMpSgv4kAiZ1V1z8BOozHL0g6EuJ6bsiLOuEbHDdu6OBciFWBqs4kKH2xMw2hzT7ZRfs58v270HG5vPHKZiyoAj5XXlGRfY2dteV89NqFIotPLyX1FWp3TZ-0KG2QJzYbia2R84Muxy-5BCF07WeAxAMgvOvC2NQ&v=5.131") { (spectators: Viewers?) in
             listOfViewers = spectators!.response.items
         }
@@ -129,15 +106,13 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = feedTableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! FeedTableViewCell
         let list = attributesForPost[indexPath.row]
         let listOfPictures = picturesForFeed[indexPath.row]
+
         let newArray = listOfViewers[indexPath.row]
         let url = URL(string: listOfPictures.sizes[4].url)
         let urlForViewers = URL(string: newArray.photo_100)
-       // let idOfPost = temporaryId[indexPath.row]//UUID()
-     //  let x = UUID()
-      //  temporaryId.append(idOfPost)
-        // print("POST ID ===\(postId)")
-       // temporaryId.append(postId)
-       // print("TTTEEEPOOORARY ID = \(temporaryId)")
+        cell.selectionStyle = .none
+        cell.heartAddToFavorite.addTarget(self, action: #selector(addPostToFavorite), for: .touchUpInside)
+        cell.heartAddToFavorite.tag = indexPath.row
         if list.text != "" {
         cell.postTxt.text = list.text
         } else {
@@ -145,47 +120,42 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
             }
         cell.likes.text = String(listOfPictures.likes.count)
         cell.postImage.downloadSPostImages(url: url!)
-        postImg = cell.postImage
         cell.postAuthorPicture.downloadSPostImages(url: urlForViewers!)
         cell.postAuthor.text = newArray.first_name + " " + newArray.last_name
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        DispatchQueue.main.async {
-            self.heartImg.isHidden = false
-            Timer.scheduledTimer(withTimeInterval: 0.9, repeats: false) { (_) in
-                self.heartImg.isHidden = true
-            }
         }
-        let list = attributesForPost[indexPath.row]
-        let newArray = listOfViewers[indexPath.row]
+    }
+
+extension FeedViewController {
+    @objc func addPostToFavorite(_ sender: UIButton) {
+        let cell = sender.superview! as! FeedTableViewCell
+        let indexPath = self.feedTableView.indexPath(for: cell)
+        let list = attributesForPost[indexPath!.row]
+        let newArray = listOfViewers[indexPath!.row]
+        let coreDataManager = CoredataManager()
         let vc = FafouritesPostsViewController()
         let dataFromCoreDataManager = vc.coreManager.favPostData
-        
-        let coreDataManager = CoredataManager()
-        let img = postImg.image
-        let compressedImg = img!.jpegData(compressionQuality: 1.0)
+        let pics = cell.postImage
+        let compressedImg = pics.image!.jpegData(compressionQuality: 1.0)
+        var isCoredataContainsPost = false
         dataFromCoreDataManager.forEach { data in
-            if (list.text == data.postText || newArray.first_name == data.postAuthor! || data.postPicture == compressedImg)
-            {
-                isCoreDatacontainsPost = true
-                print("POST IS IN FAVOURITES")
-                
+            if  (list.text == data.postText! && newArray.first_name + " " + newArray.last_name == data.postAuthor) {
+                isCoredataContainsPost.toggle()
+                showAlertPostInFavs()
+                }
             }
-            
-        }
-        if isCoreDatacontainsPost == false {
+        
+        if isCoredataContainsPost == false {
+            isPushed.toggle()
+            sender.tintColor = isPushed ? .red : nil
             coreDataManager.addPost(author: newArray.first_name + " " + newArray.last_name, text: list.text, picture: compressedImg!)
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        
-        //let postId = UUID()
-       // if  temporaryId.contains(postId)//== temporaryId
-      //  { print("Already in favorites")} else {
-//        coreDataManager.addPost(author: newArray.first_name + " " + newArray.last_name, text: list.text, picture: compressedImg!)
-
-      
+        isCoredataContainsPost.toggle()
+     
         }
     }
+
+    
+    
 

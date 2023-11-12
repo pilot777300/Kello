@@ -10,7 +10,7 @@ import UIKit
     return pic
 }()
 
- var avatar: UIImageView = {
+    var avatar: UIImageView = {
     let avatar = UIImageView()
     avatar.translatesAutoresizingMaskIntoConstraints = false
     avatar.backgroundColor = .white
@@ -45,7 +45,6 @@ var occupation: UILabel = {
  var location: UILabel = {
  let location = UILabel()
     location.translatesAutoresizingMaskIntoConstraints = false
-    //location.text = "Moscow"
     location.textAlignment = .center
     location.backgroundColor = .white
     location.font = UIFont.systemFont(ofSize: 16)
@@ -58,8 +57,8 @@ var occupation: UILabel = {
     return location
 }()
 
-var logOutLogo: ActionOnImageTapped = {
-   let logo = ActionOnImageTapped()
+var logOutLogo: UIImageView = {//ActionOnImageTapped = {
+   let logo = UIImageView()//ActionOnImageTapped()
     logo.translatesAutoresizingMaskIntoConstraints = false
     logo.backgroundColor = .white
     logo.image = UIImage(named: "Log out")
@@ -123,4 +122,15 @@ var myPicturesCollectionView: UICollectionView = {
     return cv
 }()
 
-
+extension UIImageView {
+    func actionOnImageTapped (actionOnImageTapped action: Selector?) {
+        let button = UIButton(type: .custom)
+        if let action = action {
+            print(" ALLOWED ONE")
+            button.addTarget( self , action: action, for: .touchUpInside)
+        } else {
+            print("NOT ALLOWED")
+            button.isUserInteractionEnabled = false
+        }
+    }
+}

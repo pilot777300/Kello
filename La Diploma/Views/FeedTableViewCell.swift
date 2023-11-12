@@ -3,6 +3,8 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell {
     
+    
+    
    private lazy var backView: UILabel = {
        let bv = UILabel()
         bv.translatesAutoresizingMaskIntoConstraints = false
@@ -12,7 +14,7 @@ class FeedTableViewCell: UITableViewCell {
         return bv
     }()
     
-    lazy var postAuthorPicture: UIImageView = {
+       lazy var postAuthorPicture: UIImageView = {
        let picture = UIImageView()
         picture.translatesAutoresizingMaskIntoConstraints = false
         picture.backgroundColor = .clear
@@ -23,7 +25,7 @@ class FeedTableViewCell: UITableViewCell {
         return picture
     }()
     
-    lazy var postAuthor: UILabel = {
+      lazy var postAuthor: UILabel = {
        let author = UILabel()
         author.translatesAutoresizingMaskIntoConstraints = false
         author.font = UIFont.boldSystemFont(ofSize: 18)
@@ -88,8 +90,16 @@ class FeedTableViewCell: UITableViewCell {
         return like
     }()
     
+   lazy var heartAddToFavorite: UIButton = {
+        let heart = UIButton(type: .custom)
+       heart.translatesAutoresizingMaskIntoConstraints = false
+        heart.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+       return heart
+   }()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+      
     }
     
     override func layoutSubviews() {
@@ -99,6 +109,15 @@ class FeedTableViewCell: UITableViewCell {
         
     }
 
+ //   override func prepareForReuse() {
+ //       super.prepareForReuse()
+       
+   //     heartAddToFavorite.tintColor = isPushed ? .red : nil
+//        self.accessoryType = .none
+//        accessoryView = heartAddToFavorite
+        
+   // }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
        addSubview(backView)
@@ -110,10 +129,10 @@ class FeedTableViewCell: UITableViewCell {
         backView.addSubview(likesLogo)
         backView.addSubview(viewsLogo)
         backView.addSubview(postAuthorPicture)
-       // backView.addSubview(bookmark)
+        addSubview(heartAddToFavorite)
         setCellConstraints()
     }
-
+    
     fileprivate func setCellConstraints() {
         let safeArea = self.safeAreaLayoutGuide
         
@@ -122,7 +141,6 @@ class FeedTableViewCell: UITableViewCell {
             backView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 5),
             backView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -5),
             backView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 5),
-           // backView.widthAnchor.constraint(equalTo: safeArea.widthAnchor),
             backView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -1),
             
             postAuthorPicture.topAnchor.constraint(equalTo: backView.topAnchor, constant: 10),
@@ -164,6 +182,11 @@ class FeedTableViewCell: UITableViewCell {
             views.leadingAnchor.constraint(equalTo: viewsLogo.trailingAnchor, constant: 4),
             views.trailingAnchor.constraint(equalTo: backView.trailingAnchor, constant: -16),
             views.bottomAnchor.constraint(equalTo: backView.bottomAnchor),
+            
+            heartAddToFavorite.bottomAnchor.constraint(equalTo: backView.bottomAnchor, constant: -5),
+            heartAddToFavorite.trailingAnchor.constraint(equalTo: backView.trailingAnchor, constant: -20),
+            heartAddToFavorite.widthAnchor.constraint(equalToConstant: 30),
+            heartAddToFavorite.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }

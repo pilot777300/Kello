@@ -5,7 +5,6 @@ import UIKit
 class ProfileViewController: UIViewController {
     
    private let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 19)]
-  // private let myPictures = NetworkService()
    private let internetDownLoader = NetworkManager()
    private let followersCollection = FollowersTableViewCell()
     
@@ -100,6 +99,10 @@ class ProfileViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+    
+    }
+    
     func configureStackView(_ nameOfVstack: String, number: Int) -> UIView {
 
             let myView = UIView()
@@ -147,9 +150,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-//        myPictures.fetchMyPictures(completion: {getPics in
-//            myPicturesCollectionView.reloadData()
-//        })
+        
         
         internetDownLoader.fetchData(urlString:
         "https://api.vk.com/method/photos.get?user_id=203293513&album_id=profile&access_token=vk1.a.4bpS6wrXVP58-y4pwdhmhEINUPFL9K88dIwQ0xaYGdzE2euE3WEXkKBMpSgv4kAiZ1V1z8BOozHL0g6EuJ6bsiLOuEbHDdu6OBciFWBqs4kKH2xMw2hzT7ZRfs58v270HG5vPHKZiyoAj5XXlGRfY2dteV89NqFIotPLyX1FWp3TZ-0KG2QJzYbia2R84Muxy-5BCF07WeAxAMgvOvC2NQ&v=5.131"){ (pics: MyPictures?) in
