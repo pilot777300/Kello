@@ -20,7 +20,7 @@ class AboutApplicationViewController: UIViewController {
     private let exitLabel: UIImageView = {
        let cross = UIImageView()
         cross.translatesAutoresizingMaskIntoConstraints = false
-        cross.backgroundColor = .white
+        cross.backgroundColor = .systemGray6
         cross.image = UIImage(named: "cross")
         cross.isUserInteractionEnabled = true
         return cross

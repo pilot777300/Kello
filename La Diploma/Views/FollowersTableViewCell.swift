@@ -3,7 +3,7 @@ import UIKit
 
 class FollowersTableViewCell: UITableViewCell {
 
-  // private let network = NetworkService()
+
     private let downloaderFromInternet = NetworkManager()
     lazy var collectionView: UICollectionView = {
       let layout = UICollectionViewFlowLayout()
@@ -19,6 +19,7 @@ class FollowersTableViewCell: UITableViewCell {
         cv.dataSource = self
         cv.clipsToBounds = true
        cv.isScrollEnabled = true
+        cv.backgroundColor = .systemGray6
         cv.register(FollowersCollectionView.self, forCellWithReuseIdentifier: "FollowersCell")
         return cv
     }()
@@ -26,6 +27,7 @@ class FollowersTableViewCell: UITableViewCell {
     private lazy var followersLbl: UILabel = {
         let txt = UILabel()
          txt.text = "Подписчики"
+        txt.backgroundColor = .systemGray6
          txt.font = UIFont.systemFont(ofSize: 13)
          txt.translatesAutoresizingMaskIntoConstraints = false
          return txt
@@ -35,6 +37,7 @@ class FollowersTableViewCell: UITableViewCell {
          let arr = UILabel()
         arr.font = UIFont.systemFont(ofSize: 13)
         arr.text = "See more"
+        arr.backgroundColor = .systemGray6
          arr.translatesAutoresizingMaskIntoConstraints = false
         return arr
      }()
@@ -56,12 +59,6 @@ class FollowersTableViewCell: UITableViewCell {
         }
     override func layoutSubviews() {
         configureUI()
-//        network.fetchSubscribersData(completion: { showing in
-//            self.collectionView.reloadData()
-//            let leftView = ProfileViewController().configureStackView("Подписчики", number: subcsribersList.count)
-//            mStackView.addArrangedSubview(leftView)
-//            self.collectionView.reloadData()
-//        })
         downloaderFromInternet.fetchData(urlString: "https://api.vk.com/method/friends.get?user_id=203293513&fields=photo_100&access_token=vk1.a.4bpS6wrXVP58-y4pwdhmhEINUPFL9K88dIwQ0xaYGdzE2euE3WEXkKBMpSgv4kAiZ1V1z8BOozHL0g6EuJ6bsiLOuEbHDdu6OBciFWBqs4kKH2xMw2hzT7ZRfs58v270HG5vPHKZiyoAj5XXlGRfY2dteV89NqFIotPLyX1FWp3TZ-0KG2QJzYbia2R84Muxy-5BCF07WeAxAMgvOvC2NQ&v=5.131") { (subscribers: Subscribers?) in
             subcsribersList = (subscribers?.response.items)!
             self.collectionView.reloadData()

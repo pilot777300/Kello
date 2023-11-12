@@ -69,10 +69,12 @@ class ProfileViewController: UIViewController {
         let tapForLogOutApp = UITapGestureRecognizer(target: self, action: #selector(logOutApp))
         logOutLogo.addGestureRecognizer(tapForLogOutApp)
         let rightView = configureStackView("Подписки", number: 20)
+        //rightView.backgroundColor = .systemGray6
         mStackView.addArrangedSubview(rightView)
         let centerView = configureStackView("Посты", number: 30)
+        centerView.backgroundColor = .systemGray6
         mStackView.addArrangedSubview(centerView)
-        
+       
         view.addSubview(headerBackground)
         view.addSubview(avatar)
         view.addSubview(logOutLogo)
@@ -99,14 +101,11 @@ class ProfileViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-    
-    }
-    
-    func configureStackView(_ nameOfVstack: String, number: Int) -> UIView {
+   
+    fileprivate  func configureStackView(_ nameOfVstack: String, number: Int) -> UIView {
 
             let myView = UIView()
-            myView.backgroundColor = .white
+        myView.backgroundColor = .systemGray6
             let vStackView = UIStackView()
             vStackView.axis  = .vertical
             vStackView.alignment = .center
@@ -116,15 +115,14 @@ class ProfileViewController: UIViewController {
             let value = String(quantity)
             let valueLabel = UILabel()
             valueLabel.text = value
-           valueLabel.backgroundColor = .white//.blue
+           valueLabel.backgroundColor = .systemGray6
            valueLabel.textColor = UIColor(named: "BlueCustomColor")
            valueLabel.textAlignment = .center
            valueLabel.font = UIFont.boldSystemFont(ofSize: 26)
             let nameLabel = UILabel()
            nameLabel.text = nameOfVstack
-           nameLabel.textColor = .darkGray
            nameLabel.font = nameLabel.font.withSize(14)
-           nameLabel.backgroundColor = .white
+           nameLabel.backgroundColor = .systemGray6
             myView.addSubview(vStackView)
             vStackView.addArrangedSubview(valueLabel)
             vStackView.addArrangedSubview(nameLabel)
@@ -149,7 +147,8 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray6
+        
         
         
         internetDownLoader.fetchData(urlString:
@@ -189,9 +188,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = myPicturesCollectionView.dequeueReusableCell(withReuseIdentifier: "myPicturesCell", for: indexPath) as! MyPicturesCollectionViewCell
-        
         let list = listOfMyPhoto[indexPath.row]
-
         if list.sizes[0].url != nil {
             let url = URL(string: list.sizes[0].url)
             cell.image.downloadImage(url: url!)

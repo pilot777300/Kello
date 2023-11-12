@@ -27,7 +27,7 @@ class NewsViewController: UIViewController {
         newsTableView.allowsSelection = true
         newsTableView.register(NewsTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         newsTableView.translatesAutoresizingMaskIntoConstraints = false
-        newsTableView.backgroundColor = .systemGray5
+        newsTableView.backgroundColor = .systemGray4
         view.addSubview(newsTableView)
     }
     
@@ -40,38 +40,11 @@ class NewsViewController: UIViewController {
             newsTableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
         ])
     }
-    
-  
-//    func fetchNewsData() {
-//        guard let url = URL(string: "https://newsdata.io/api/1/news?country=ru&apikey=pub_265722b7bb33f141948a5b128247efe8402d2") else {
-//            print("ERROR OCCURED DURING URL ADRESS")
-//            return
-//        }
-//        let task = URLSession.shared.dataTask(with: url) { (data, _, _) in
-//            guard let data = data
-//            else {
-//              print("Error occured during access data")
-//                return
-//            }
-//            var newsData: News?
-//            do {
-//                newsData = try JSONDecoder().decode(News.self, from: data)
-//            } catch {
-//               print("Error during decode Data")
-//            }
-//            self.newsList = newsData!.results
-//            DispatchQueue.main.async {
-//                self.newsTableView.reloadData()
-//                self.activityIndicatorView.stopAnimating()
-//            }
-//        }
-//        task.resume()
-//    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = attributes
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray6
         self.title = "Новости"
         configureNewsTableView()
         setupConstraints()

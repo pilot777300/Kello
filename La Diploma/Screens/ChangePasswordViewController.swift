@@ -7,7 +7,7 @@ class ChangePasswordViewController: UIViewController {
     private let headerBackground: UIImageView = {
         let pic = UIImageView()
         pic.translatesAutoresizingMaskIntoConstraints = false
-        pic.backgroundColor = .white
+        pic.backgroundColor = .systemGray6
         pic.image = UIImage(named: "Header background")
         return pic
     }()
@@ -15,7 +15,7 @@ class ChangePasswordViewController: UIViewController {
      lazy var avatar: UIImageView = {
         let avatar = UIImageView()
         avatar.translatesAutoresizingMaskIntoConstraints = false
-        avatar.backgroundColor = .white
+        avatar.backgroundColor = .systemGray6
         avatar.image = UIImage(named: "Avatar80")
         avatar.layer.cornerRadius = 50
         avatar.layer.borderWidth = 5
@@ -27,7 +27,7 @@ class ChangePasswordViewController: UIViewController {
     private let changePasswordLabel: UILabel = {
        let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.backgroundColor = .white
+        lbl.backgroundColor = .systemGray6
         lbl.text = "Новый пароль"
         return lbl
     }()
@@ -35,7 +35,7 @@ class ChangePasswordViewController: UIViewController {
     lazy var newPasswordField: UITextField = {
        let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
-        field.backgroundColor = .systemGray5
+        field.backgroundColor = .systemGray6
         field.placeholder = "Задайте новый пароль"
         field.layer.cornerRadius = 5
         return field
@@ -44,7 +44,7 @@ class ChangePasswordViewController: UIViewController {
     private let confirmPasswordLabel: UILabel = {
        let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.backgroundColor = .white
+        lbl.backgroundColor = .systemGray6
         lbl.text = "Повторите пароль"
         return lbl
     }()
@@ -52,7 +52,7 @@ class ChangePasswordViewController: UIViewController {
     lazy var confirmPasswordField: UITextField = {
        let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
-        field.backgroundColor = .systemGray5
+        field.backgroundColor = .systemGray6
         field.placeholder = "Повторите пароль"
         field.layer.cornerRadius = 5
         return field
@@ -61,7 +61,6 @@ class ChangePasswordViewController: UIViewController {
     private lazy var saveChangesButton: GradientButton = {
        let button = GradientButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        //button.layer.cornerRadius = 5
         button.layer.masksToBounds = true
         button.clipsToBounds = true
         button.setTitle("Сохранить", for: .normal)
@@ -126,7 +125,7 @@ class ChangePasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray6
         configureView()
         setConstraints()
     }

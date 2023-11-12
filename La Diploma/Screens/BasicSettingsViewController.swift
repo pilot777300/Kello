@@ -8,7 +8,7 @@ class BasicSettingsViewController: UIViewController {
    private let headerBackground: UIImageView = {
        let pic = UIImageView()
        pic.translatesAutoresizingMaskIntoConstraints = false
-       pic.backgroundColor = .white
+       pic.backgroundColor = .systemGray6
        pic.image = UIImage(named: "Header background")
        return pic
    }()
@@ -16,7 +16,7 @@ class BasicSettingsViewController: UIViewController {
     lazy var avatarPicture: UIImageView = {
        let avatar = UIImageView()
        avatar.translatesAutoresizingMaskIntoConstraints = false
-       avatar.backgroundColor = .white
+        avatar.backgroundColor = .systemGray6
        avatar.image = UIImage(named: "Avatar80")
        avatar.layer.cornerRadius = 50
        avatar.layer.borderWidth = 5
@@ -36,7 +36,7 @@ class BasicSettingsViewController: UIViewController {
     private let nameLabel: UILabel = {
        let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.backgroundColor = .white
+        lbl.backgroundColor = .systemGray6
         lbl.text = "Имя"
         return lbl
     }()
@@ -44,7 +44,7 @@ class BasicSettingsViewController: UIViewController {
     lazy var nameField: UITextField = {
        let namefield = UITextField()
         namefield.translatesAutoresizingMaskIntoConstraints = false
-        namefield.backgroundColor = .systemGray5
+        namefield.backgroundColor = .systemGray6
         namefield.placeholder = "\(userName.text ?? "Имя")"
         namefield.layer.cornerRadius = 5
         return namefield
@@ -53,7 +53,7 @@ class BasicSettingsViewController: UIViewController {
     private let surnameLabel: UILabel = {
        let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.backgroundColor = .white
+        lbl.backgroundColor = .systemGray6
         lbl.text = "Фамилия"
         return lbl
     }()
@@ -61,7 +61,7 @@ class BasicSettingsViewController: UIViewController {
     lazy var surnameField: UITextField = {
        let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
-        field.backgroundColor = .systemGray5
+        field.backgroundColor = .systemGray6
         field.placeholder = "Фамилия"
         field.layer.cornerRadius = 5
         return field
@@ -70,7 +70,7 @@ class BasicSettingsViewController: UIViewController {
     private let occupationLabel: UILabel = {
        let prof = UILabel()
         prof.translatesAutoresizingMaskIntoConstraints = false
-        prof.backgroundColor = .white
+        prof.backgroundColor = .systemGray6
         prof.text = "О себе"
         return prof
     }()
@@ -78,7 +78,7 @@ class BasicSettingsViewController: UIViewController {
     lazy var occupationField: UITextField = {
        let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
-        field.backgroundColor = .systemGray5
+        field.backgroundColor = .systemGray6
         field.layer.cornerRadius = 5
         field.placeholder = "\(occupation.text ?? "Профессия")"
         return field
@@ -189,7 +189,7 @@ class BasicSettingsViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = ""
           self.navigationController?.navigationBar.prefersLargeTitles = true
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray6
         configureView()
         setConstraints()
        

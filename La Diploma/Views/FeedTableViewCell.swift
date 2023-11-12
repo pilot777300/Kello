@@ -8,7 +8,7 @@ class FeedTableViewCell: UITableViewCell {
    private lazy var backView: UILabel = {
        let bv = UILabel()
         bv.translatesAutoresizingMaskIntoConstraints = false
-       bv.backgroundColor = .white
+       bv.backgroundColor = .systemGray6
        bv.clipsToBounds = true
        bv.layer.cornerRadius = 5
         return bv
@@ -30,8 +30,7 @@ class FeedTableViewCell: UITableViewCell {
         author.translatesAutoresizingMaskIntoConstraints = false
         author.font = UIFont.boldSystemFont(ofSize: 18)
         author.numberOfLines = 2
-        author.textColor = .black
-        author.backgroundColor = .white
+        author.backgroundColor = .systemGray6
         author.text = "Vasily"
         return author
     }()
@@ -41,7 +40,7 @@ class FeedTableViewCell: UITableViewCell {
        ptxt.translatesAutoresizingMaskIntoConstraints = false
        ptxt.font = UIFont.systemFont(ofSize: 17)
        ptxt.numberOfLines = 0
-        ptxt.backgroundColor = .white
+        ptxt.backgroundColor = .systemGray6
         ptxt.text = ""
        return ptxt
    }()
@@ -60,7 +59,7 @@ class FeedTableViewCell: UITableViewCell {
        let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.font = UIFont.systemFont(ofSize: 14)
-          lbl.backgroundColor = .white
+          lbl.backgroundColor = .systemGray6
           lbl.text = "324"
         return lbl
     }()
@@ -68,7 +67,7 @@ class FeedTableViewCell: UITableViewCell {
     private lazy var likesLogo: UIImageView = {
        let logo = UIImageView()
         logo.translatesAutoresizingMaskIntoConstraints = false
-        logo.backgroundColor = .white
+        logo.backgroundColor = .systemGray6
         logo.image = UIImage(systemName: "hand.thumbsup.fill")
         return logo
     }()
@@ -76,7 +75,7 @@ class FeedTableViewCell: UITableViewCell {
     private lazy var viewsLogo: UIImageView = {
        let logo = UIImageView()
         logo.translatesAutoresizingMaskIntoConstraints = false
-        logo.backgroundColor = .white
+        logo.backgroundColor = .systemGray6
         logo.image = UIImage(systemName: "person.fill")
         return logo
     }()
@@ -85,7 +84,7 @@ class FeedTableViewCell: UITableViewCell {
        let like = UILabel()
         like.translatesAutoresizingMaskIntoConstraints = false
         like.font = UIFont.systemFont(ofSize: 14)
-         like.backgroundColor = .white
+         like.backgroundColor = .systemGray6
          like.text = "216"
         return like
     }()

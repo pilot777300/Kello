@@ -8,7 +8,7 @@ class NotificationsViewController: UIViewController {
     private let headerBackground: UIImageView = {
         let pic = UIImageView()
         pic.translatesAutoresizingMaskIntoConstraints = false
-        pic.backgroundColor = .white
+        pic.backgroundColor = .systemGray6
         pic.image = UIImage(named: "Header background")
         return pic
     }()
@@ -16,7 +16,7 @@ class NotificationsViewController: UIViewController {
      lazy var avatarForNotificationsController: UIImageView = {
         let avatar = UIImageView()
         avatar.translatesAutoresizingMaskIntoConstraints = false
-        avatar.backgroundColor = .white
+        avatar.backgroundColor = .systemGray6
         avatar.image = UIImage(named: "Avatar80")
         avatar.layer.cornerRadius = 50
         avatar.layer.borderWidth = 5
@@ -34,7 +34,7 @@ class NotificationsViewController: UIViewController {
         tableViewForNotificationsController.translatesAutoresizingMaskIntoConstraints = false
         tableViewForNotificationsController.allowsSelection = true
         tableViewForNotificationsController.separatorColor = .black
-        tableViewForNotificationsController.backgroundColor = .white
+        tableViewForNotificationsController.backgroundColor = .systemGray6
         tableViewForNotificationsController.isScrollEnabled = false
         tableViewForNotificationsController.register(NotificationsVCTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         view.addSubview(tableViewForNotificationsController)
@@ -72,7 +72,7 @@ class NotificationsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray6
         configureView()
         configureTableVew()
         setConstraints()

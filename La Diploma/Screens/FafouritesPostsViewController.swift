@@ -17,7 +17,7 @@ class FafouritesPostsViewController: UIViewController {
         favPostTableView.allowsSelection = true
         favPostTableView.register(FavPostsTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         favPostTableView.translatesAutoresizingMaskIntoConstraints = false
-        favPostTableView.backgroundColor = .systemGray5
+        favPostTableView.backgroundColor = .systemGray4
         view.addSubview(favPostTableView)
     }
     
@@ -35,7 +35,7 @@ class FafouritesPostsViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Избранные"
         self.navigationController?.navigationBar.titleTextAttributes = attributes
-        view.backgroundColor = .systemGray4
+        view.backgroundColor = .systemGray6
         configureFavPostTableView()
         setupConstraints()
     }

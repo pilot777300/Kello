@@ -54,7 +54,7 @@ class FeedViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = attributes
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray6
         self.title = "Лента"
         configureFeedTableView()
         setupConstraints()

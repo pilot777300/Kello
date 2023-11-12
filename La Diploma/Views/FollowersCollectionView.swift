@@ -9,7 +9,7 @@ class FollowersCollectionView: UICollectionViewCell {
         bv.translatesAutoresizingMaskIntoConstraints = false
         bv.contentMode = .scaleToFill
         bv.layer.cornerRadius = 12
-        bv.backgroundColor = .white
+        bv.backgroundColor = .systemGray6//.white
       return bv
     }()
     

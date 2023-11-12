@@ -5,7 +5,7 @@ import UIKit
  let headerBackground: UIImageView = {
     let pic = UIImageView()
     pic.translatesAutoresizingMaskIntoConstraints = false
-    pic.backgroundColor = .white
+    pic.backgroundColor = .systemGray6//.white
     pic.image = UIImage(named: "Header background")
     return pic
 }()
@@ -13,7 +13,7 @@ import UIKit
     var avatar: UIImageView = {
     let avatar = UIImageView()
     avatar.translatesAutoresizingMaskIntoConstraints = false
-    avatar.backgroundColor = .white
+    avatar.backgroundColor = .systemGray6//.white
     avatar.image = UIImage(named: "Avatar80")
     avatar.layer.cornerRadius = 60
     avatar.layer.borderWidth = 5
@@ -27,7 +27,7 @@ import UIKit
     userName.translatesAutoresizingMaskIntoConstraints = false
     userName.text = "Mister Developer"
     userName.textAlignment = .center
-    userName.backgroundColor = .white
+    userName.backgroundColor = .systemGray6//.white
     userName.font = UIFont.boldSystemFont(ofSize: 20)
     return userName
 }()
@@ -37,7 +37,7 @@ var occupation: UILabel = {
     occupation.translatesAutoresizingMaskIntoConstraints = false
     occupation.text = "Junior Ios engeneer"
     occupation.textAlignment = .center
-    occupation.backgroundColor = .white
+    occupation.backgroundColor = .systemGray6//.white
     occupation.font = UIFont.systemFont(ofSize: 16)
     return occupation
 }()
@@ -46,7 +46,7 @@ var occupation: UILabel = {
  let location = UILabel()
     location.translatesAutoresizingMaskIntoConstraints = false
     location.textAlignment = .center
-    location.backgroundColor = .white
+    location.backgroundColor = .systemGray6//.white
     location.font = UIFont.systemFont(ofSize: 16)
     let attachment = NSTextAttachment()
     attachment.image = UIImage(systemName: "location")
@@ -57,10 +57,10 @@ var occupation: UILabel = {
     return location
 }()
 
-var logOutLogo: UIImageView = {//ActionOnImageTapped = {
-   let logo = UIImageView()//ActionOnImageTapped()
+var logOutLogo: UIImageView = {
+   let logo = UIImageView()
     logo.translatesAutoresizingMaskIntoConstraints = false
-    logo.backgroundColor = .white
+    logo.backgroundColor = .systemGray6//.white
     logo.image = UIImage(named: "Log out")
     logo.isUserInteractionEnabled = true
     return logo
@@ -70,7 +70,7 @@ var logOutLogo: UIImageView = {//ActionOnImageTapped = {
 var editProfileLogo: UIImageView = {
    let logo = UIImageView()
     logo.translatesAutoresizingMaskIntoConstraints = false
-    logo.backgroundColor = .white
+    logo.backgroundColor = .systemGray6
     logo.image = UIImage(named: "Edit Square")
     logo.isUserInteractionEnabled = true
     return logo
@@ -79,7 +79,7 @@ var editProfileLogo: UIImageView = {
 var mStackView: UIStackView = {
    let mStackView = UIStackView()
     mStackView.translatesAutoresizingMaskIntoConstraints = false
-    mStackView.backgroundColor = .lightGray
+    mStackView.backgroundColor = .systemGray6
     mStackView.axis = .horizontal
     mStackView.distribution = .fillEqually
     mStackView.alignment = .bottom
@@ -91,7 +91,7 @@ var mStackView: UIStackView = {
 var scroll: UIScrollView = {
    let scroll = UIScrollView()
     scroll.translatesAutoresizingMaskIntoConstraints = false
-    scroll.backgroundColor = .systemGray4
+    scroll.backgroundColor = .systemGray6
     scroll.showsHorizontalScrollIndicator = true
     scroll.isScrollEnabled = true
     return scroll
@@ -116,7 +116,7 @@ var myPicturesCollectionView: UICollectionView = {
     let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
     cv.translatesAutoresizingMaskIntoConstraints = false
     cv.showsVerticalScrollIndicator = true
-    cv.backgroundColor = .white
+    cv.backgroundColor = .systemGray6//.white
     cv.clipsToBounds = true
     cv.register(MyPicturesCollectionViewCell.self, forCellWithReuseIdentifier: "myPicturesCell")
     return cv

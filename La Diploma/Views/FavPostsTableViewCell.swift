@@ -6,7 +6,7 @@ class FavPostsTableViewCell: UITableViewCell {
     private lazy var backView: UILabel = {
        let bv = UILabel()
         bv.translatesAutoresizingMaskIntoConstraints = false
-        bv.backgroundColor = .white
+        bv.backgroundColor = .systemGray6//.white
         bv.clipsToBounds = true
         bv.layer.cornerRadius = 10
         return bv

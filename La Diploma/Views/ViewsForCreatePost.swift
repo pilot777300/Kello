@@ -40,7 +40,7 @@ var pictureForNewPost: UIImageView = {
 var textForNewPost: UITextView = {
    let post = UITextView()
     post.translatesAutoresizingMaskIntoConstraints = false
-    post.backgroundColor = .white
+    post.backgroundColor = .systemGray6
     post.textAlignment = .left
     post.font = UIFont.systemFont(ofSize: 16)
     post.layer.masksToBounds = true
@@ -51,7 +51,6 @@ var textForNewPost: UITextView = {
 var newPostAuthorLocation: UILabel = {
     let location = UILabel()
        location.translatesAutoresizingMaskIntoConstraints = false
-       //location.text = "Moscow"
        location.textAlignment = .left
        location.backgroundColor = .clear
        location.font = UIFont.systemFont(ofSize: 15)
@@ -72,11 +71,6 @@ var placeholder: UILabel = {
     placeholder.sizeToFit()
     textForNewPost.addSubview(placeholder)
     placeholder.textColor = .tertiaryLabel
-//    if textForNewPost.text.isEmpty == false {
-//        placeholder.isHidden = true
-//    }
-    
-    
     placeholder.isHidden = !textForNewPost.text.isEmpty
     return placeholder
 }()

@@ -7,7 +7,7 @@ class NewsTableViewCell: UITableViewCell {
     private lazy var backView: UILabel = {
        let bv = UILabel()
         bv.translatesAutoresizingMaskIntoConstraints = false
-        bv.backgroundColor = .white
+        bv.backgroundColor = .systemGray6//.white
         bv.clipsToBounds = true
         bv.layer.cornerRadius = 10
         return bv
@@ -16,7 +16,7 @@ class NewsTableViewCell: UITableViewCell {
     lazy var newsImage: UIImageView = {
        let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
-        //img.backgroundColor = .white
+        img.backgroundColor = .systemGray6//.white
         img.clipsToBounds = true
         img.layer.cornerRadius = 10
         return img
@@ -27,8 +27,8 @@ class NewsTableViewCell: UITableViewCell {
         title.translatesAutoresizingMaskIntoConstraints = false
         title.font = UIFont.systemFont(ofSize: 16)
         title.numberOfLines = 0
-        //title.backgroundColor = .blue
-       // title.text = "This is text of news title ghdkkencjfjnnekxsnswnemcxcovnerljnfcknsldnfrleksna;s"
+       // title.textColor = //.black
+       
         return title
     }()
     

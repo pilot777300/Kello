@@ -7,7 +7,7 @@ class NotificationsVCTableViewCell: UITableViewCell {
     let backView: UILabel = {
         let bv = UILabel()
          bv.translatesAutoresizingMaskIntoConstraints = false
-         bv.backgroundColor = .white
+        bv.backgroundColor = .systemGray6
          return bv
      }()
 
@@ -15,8 +15,7 @@ class NotificationsVCTableViewCell: UITableViewCell {
        let author = UILabel()
         author.translatesAutoresizingMaskIntoConstraints = false
         author.font = UIFont.systemFont(ofSize: 14)
-        author.textColor = .black
-        author.backgroundColor = .white
+        author.backgroundColor = .systemGray6
         author.text = ""
         return author
     }()
